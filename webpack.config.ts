@@ -10,10 +10,11 @@ export default (env: BuildEnv)=> {
         entry: path.resolve(__dirname, 'src','index.tsx'),
         build:  path.resolve(__dirname, 'build'),
         html: path.resolve(__dirname, 'public', 'index.html'),
+        src: path.resolve(__dirname, 'src')
     }
 
     const mode = env.mode || 'development'
-    const PORT = 3000
+    const port = env.port || 4000
 
     const isDev = mode === 'development'
 
@@ -21,7 +22,7 @@ export default (env: BuildEnv)=> {
         mode,
         paths,
         isDev,
-        port: PORT
+        port,
     })
 
     return config;
