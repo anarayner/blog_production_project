@@ -1,12 +1,9 @@
-.app.dark{
-  --bg-color: #0D0D2B;
-  --inverted-bg-color: rgb(32, 32, 82);
-
-  --border-color: #0D0D2B;
-
-  --primary-color: #8f8f8f;
-  --secondary-color: rgba(65, 105, 225, 0.2);
-
-  --inverted-primary-color: #cccccc;
-  --inverted-secondary-color: rgba(65, 105, 225, 0.2);
+.app.dark {
+    --bg-color: #0d0d2b;
+    --inverted-bg-color: rgb(32 32 82);
+    --border-color: #0d0d2b;
+    --primary-color: #8f8f8f;
+    --secondary-color: rgb(65 105 225 / 20%);
+    --inverted-primary-color: #ccc;
+    --inverted-secondary-color: rgb(65 105 225 / 20%);
 }

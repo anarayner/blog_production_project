@@ -1,17 +1,17 @@
-.Navbar{
-  width: 100%;
-  height: var(--navbar-height);
-  background: var(--inverted-bg-color);
-  display: flex;
-  align-items: center;
-  padding: 20px 50px;
-  border-bottom: var(--border-color) 1px solid;
+.Navbar {
+    width: 100%;
+    height: var(--navbar-height);
+    background: var(--inverted-bg-color);
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: var(--border-color) 1px solid;
 }
 
-.links{
-  margin-left: auto;
+.links {
+    margin-left: auto;
 }
 
-.mainLink{
-  margin-right: 30px;
+.mainLink {
+    margin-right: 30px;
 }
