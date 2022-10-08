@@ -14,13 +14,13 @@ export const Navbar = ({ className }: NavbarProps) => (
             <AppLink
                 to="/"
                 className={cls.mainLink}
-                theme={AppLinkTheme.INVERTED}
+                theme={AppLinkTheme.PRIMARY}
             >
                 Main
             </AppLink>
             <AppLink
                 to="/about"
-                theme={AppLinkTheme.INVERTED}
+                theme={AppLinkTheme.PRIMARY}
             >
                 About
             </AppLink>
