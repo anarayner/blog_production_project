@@ -3,6 +3,6 @@
   "rules": {
     "indentation": [4],
     "selector-class-pattern": null,
-    "declaration-colon-newline-after": "always"
+    "declaration-colon-newline-after": null
   }
 }
