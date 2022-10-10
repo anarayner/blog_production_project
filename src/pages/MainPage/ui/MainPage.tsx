@@ -3,7 +3,7 @@ import { BugButton } from 'app/providers/ErrorBoundary';
 
 const MainPage = () => (
     <div>
-        Main
+        Main check
         <BugButton />
     </div>
 );
