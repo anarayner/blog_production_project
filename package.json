@@ -14,6 +14,7 @@
     "test:unit": "jest",
     "test:ui": "npx loki test",
     "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
+    "test:ui:ci2": "loki --requireReference --reactUri file:./storybook-static --chromeFlags=\"--headless --no-sandbox\"",
     "test:ui:ok": "npx loki approve",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook"
@@ -90,14 +91,14 @@
   "loki": {
     "configurations": {
       "chrome.laptop": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "width": 1366,
         "height": 768,
         "deviceScaleFactor": 1,
         "mobile": false
       },
       "chrome.iphone7": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "preset": "iPhone 7"
       }
     }
