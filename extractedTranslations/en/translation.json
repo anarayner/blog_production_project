@@ -1,7 +1,9 @@
 {
   "EN": "EN",
   "Error": "Error",
+  "Login": "Login",
   "Page not found": "Page not found",
   "Page not founded": "Page not founded",
-  "Reload": "Reload"
+  "Reload": "Reload",
+  "Sign in": "Sign in"
 }

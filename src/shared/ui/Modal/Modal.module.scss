@@ -20,11 +20,12 @@
 
 .content {
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 8px;
     background: var(--inverted-bg-color);
     transition: 0.3s transform;
     transform: scale(0.5);
     max-width: 60%;
+    color: var(--primary-color);
 }
 
 .opened {
