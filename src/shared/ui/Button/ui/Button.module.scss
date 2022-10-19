@@ -1,8 +1,10 @@
 .Button {
     cursor: pointer;
     color: var(--bg-color);
+    background: var(--secondary-color);
     padding: 8px 15px;
     border-radius: 3px;
+    border: 1px solid var(--primary-color);
 }
 
 .clear {
@@ -61,4 +63,8 @@
 
 .size_xl {
     font: var(--font-xl);
+}
+
+.disabled {
+    opacity: 0.5;
 }

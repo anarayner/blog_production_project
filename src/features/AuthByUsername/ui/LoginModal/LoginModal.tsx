@@ -19,7 +19,6 @@ export const LoginModal = ({ className, isOpen, onClose }: LoginModalProps) => {
             onClose={onClose}
             lazy
         >
-            <h4>{t('Login')}</h4>
             <LoginForm />
         </Modal>
     );
