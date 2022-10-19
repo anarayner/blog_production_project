@@ -1,3 +1,3 @@
-import { AboutPageLazy } from 'pages/AboutPage/ui/AboutPage.lazy';
+import { AboutPageAsync } from 'pages/AboutPage/ui/AboutPage.async';
 
-export { AboutPageLazy as AboutPage };
+export { AboutPageAsync as AboutPage };
