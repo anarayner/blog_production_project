@@ -18,33 +18,9 @@
 
 .items {
     margin-top: 20px;
+    margin-left: 30px;
     display: flex;
     flex-direction: column;
-    margin-left: 30px;
-}
-
-.item {
-    margin-top: 10px;
-    align-items: center;
-}
-
-.link {
-    margin-left: 10px;
-    opacity: 1;
-}
-
-.icon {
-    fill: var(--primary-color);
-}
-
-.collapsed {
-    width: var(--sidebar-width-collapsed);
-
-    .link {
-        opacity: 0;
-        transition: 0.3s opacity;
-        width: 0;
-    }
 }
 
 .switchers {
@@ -62,4 +38,8 @@
     justify-content: center;
     width: 100%;
     margin: 0;
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
 }
