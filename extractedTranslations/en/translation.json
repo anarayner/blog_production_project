@@ -1,10 +1,14 @@
 {
   "EN": "EN",
+  "Edit": "Edit",
   "Error": "Error",
+  "First Name": "First Name",
+  "Last Name": "Last Name",
   "Log out": "",
   "Login": "Login",
   "Page not found": "Page not found",
   "Page not founded": "Page not founded",
+  "Profile": "Profile",
   "Reload": "Reload",
   "Sign in": "Sign in"
 }

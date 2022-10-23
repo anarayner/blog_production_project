@@ -5,15 +5,14 @@ import { Theme } from 'app/providers/ThemeProvider';
 import MainPage from './MainPage';
 
 export default {
-    title: 'pages/ProfilePage',
+    title: 'pages/MainPage',
     component: MainPage,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
 } as ComponentMeta<typeof MainPage>;
 
-// @ts-ignore
-const Template: ComponentStory<typeof MainPage> = (args) => <MainPage {...args} />;
+const Template: ComponentStory<typeof MainPage> = () => <MainPage />;
 
 export const Light = Template.bind({});
 Light.args = {};

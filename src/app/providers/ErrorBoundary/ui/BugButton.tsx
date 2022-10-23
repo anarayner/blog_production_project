@@ -1,10 +1,5 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button';
 import { useEffect, useState } from 'react';
-
-interface BugButtonProps {
-    className?: string;
-}
 
 export const BugButton = () => {
     const [error, setError] = useState(false);
@@ -21,7 +16,7 @@ export const BugButton = () => {
 
     return (
         <Button onClick={throwError}>
-            Error -
+            Error
             {error}
         </Button>
     );
