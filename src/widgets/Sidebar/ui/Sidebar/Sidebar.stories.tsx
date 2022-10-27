@@ -2,7 +2,6 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { RouterDecorator } from 'shared/config/storybook/decorators/RouterDecorator';
 import { Sidebar } from './Sidebar';
 
 export default {

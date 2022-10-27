@@ -5,3 +5,12 @@
     border: none;
     color: #0d0d2b;
 }
+
+.readonly {
+    .input {
+        width: 100%;
+        border: none;
+        color: var(--primary-color);
+        background-color: var(--bg-color);
+    }
+}

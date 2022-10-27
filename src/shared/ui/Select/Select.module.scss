@@ -1,0 +1,23 @@
+.Wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    margin-right: 10px;
+}
+
+.select {
+    padding: 8px 16px;
+    background: var(--bg-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.option {
+    background: var(--bg-color);
+}
+
+.select:focus {
+    border: 1px red solid;
+}

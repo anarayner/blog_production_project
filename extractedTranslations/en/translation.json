@@ -1,4 +1,10 @@
 {
+  "An error occurred while loading the profile": "An error occurred while loading the profile",
+  "Avatar link": "Avatar link",
+  "Cancel": "Cancel",
+  "Choose country": "",
+  "Choose currency": "",
+  "City": "City",
   "EN": "EN",
   "Edit": "Edit",
   "Error": "Error",
@@ -10,5 +16,10 @@
   "Page not founded": "Page not founded",
   "Profile": "Profile",
   "Reload": "Reload",
-  "Sign in": "Sign in"
+  "Save": "Save",
+  "Sign in": "Sign in",
+  "Try to reload the page": "Try to reload the page",
+  "Username": "Username",
+  "Your age": "Your age",
+  "error": "error"
 }
