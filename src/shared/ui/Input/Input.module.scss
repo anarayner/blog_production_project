@@ -14,3 +14,14 @@
         background-color: var(--bg-color);
     }
 }
+
+.placeholder {
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+
+.with_placeholder {
+    display: flex;
+    justify-content: space-between;
+}

@@ -33,15 +33,35 @@ export const Input = memo((props: InputProps) => {
 
     return (
         <div className={classNames('', mods, [className])}>
-            <input
-                className={cls.input}
-                type={type}
-                value={value}
-                onChange={onChangeHandler}
-                placeholder={placeholder}
-                readOnly={readonly}
-                {...otherProps}
-            />
+            {readonly
+                ? (
+                    <div className={cls.with_placeholder}>
+                        <div className={cls.placeholder}>
+                            {placeholder}
+                            :
+                        </div>
+                        <input
+                            className={cls.input}
+                            type={type}
+                            value={value}
+                            onChange={onChangeHandler}
+                            placeholder={placeholder}
+                            readOnly={readonly}
+                            {...otherProps}
+                        />
+                    </div>
+                )
+                : (
+                    <input
+                        className={cls.input}
+                        type={type}
+                        value={value}
+                        onChange={onChangeHandler}
+                        placeholder={placeholder}
+                        readOnly={readonly}
+                        {...otherProps}
+                    />
+                )}
         </div>
     );
 });
