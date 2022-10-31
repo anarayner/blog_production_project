@@ -32,7 +32,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         data,
         isLoading,
         error,
-        readonly,
+        readonly = true,
         onChangeFirstname,
         onChangeLastname,
         onChangeAge,
