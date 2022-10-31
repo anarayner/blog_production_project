@@ -4,7 +4,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/Dynamic
 import {
     fetchProfileData,
     getProfileError, getProfileForm,
-    getProfileIsLoading, getProfileReadOnly, profileActions,
+    getProfileIsLoading, getProfileReadonly, profileActions,
     ProfileCard,
     profileReducer,
 } from 'entities/Profile';
@@ -33,7 +33,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     const formData = useSelector(getProfileForm);
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
-    const readonly = useSelector(getProfileReadOnly);
+    const readonly = useSelector(getProfileReadonly);
     const validateErrors = useSelector(getProfileValidateErrors);
 
     useEffect(() => {

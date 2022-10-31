@@ -29,8 +29,8 @@ export {
 } from './model/selectors/getProfileError/getProfileError';
 
 export {
-    getProfileReadOnly,
-} from './model/selectors/getProfileReadOnly/getProfileReadOnly';
+    getProfileReadonly,
+} from './model/selectors/getProfileReadOnly/getProfileReadonly';
 
 export {
     getProfileForm,
