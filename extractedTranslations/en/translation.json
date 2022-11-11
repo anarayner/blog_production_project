@@ -18,8 +18,14 @@
   "Reload": "Reload",
   "Save": "Save",
   "Sign in": "Sign in",
+  "There was an error loading the article": {
+    "": ""
+  },
   "Try to reload the page": "Try to reload the page",
   "Username": "Username",
   "Your age": "Your age",
-  "error": "error"
+  "error": "error",
+  "Комментарии": "Комментарии",
+  "Комментарии отсутствуют": "Комментарии отсутствуют",
+  "Статья не найдена": "Статья не найдена"
 }
