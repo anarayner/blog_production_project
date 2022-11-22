@@ -1,5 +1,3 @@
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-
 export function buildBabelLoaders(isDev: boolean) {
     return {
         test: /\.(js|jsx|tsx)$/,

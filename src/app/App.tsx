@@ -15,7 +15,6 @@ function App() {
         dispatch(userActions.initAuthData());
     }, [dispatch]);
 
-    console.log(theme);
     return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback="loading">
