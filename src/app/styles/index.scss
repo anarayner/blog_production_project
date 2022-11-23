@@ -18,6 +18,7 @@ body {
 
 .content-page {
     display: flex;
+    justify-content: center;
 }
 
 .page-wrapper {
@@ -26,4 +27,5 @@ body {
     height: calc(100vh - var(--navbar-height));
     overflow: auto;
     width: 100%;
+    justify-content: center;
 }

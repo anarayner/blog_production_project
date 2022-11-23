@@ -1,10 +1,12 @@
 {
   "An error occurred while loading the profile": "An error occurred while loading the profile",
   "Avatar link": "Avatar link",
+  "Back": "Back",
   "Cancel": "Cancel",
   "Choose country": "Choose country",
   "Choose currency": "Choose currency",
   "City": "City",
+  "Comments": "Comments",
   "EN": "EN",
   "Edit": "Edit",
   "Error": "Error",
@@ -15,6 +17,13 @@
   "Page not found": "Page not found",
   "Page not founded": "Page not founded",
   "Profile": "Profile",
+  "Read more": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Reload": "Reload",
   "Save": "Save",
   "Sign in": "Sign in",
@@ -27,5 +36,12 @@
   "error": "error",
   "Комментарии": "Комментарии",
   "Комментарии отсутствуют": "Комментарии отсутствуют",
-  "Статья не найдена": "Статья не найдена"
+  "Статья не найдена": "Статья не найдена",
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  }
 }
