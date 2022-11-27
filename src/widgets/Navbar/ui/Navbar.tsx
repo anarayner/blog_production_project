@@ -1,7 +1,7 @@
 import React, { memo, useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button';
-import { ButtonTheme } from 'shared/ui/Button/ui/Button';
+import { ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';

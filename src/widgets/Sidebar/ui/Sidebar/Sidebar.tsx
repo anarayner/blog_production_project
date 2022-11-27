@@ -3,7 +3,7 @@ import { memo, useState } from 'react';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import { Button } from 'shared/ui/Button';
-import { ButtonSize, ButtonTheme } from 'shared/ui/Button/ui/Button';
+import { ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { SidebarItem } from 'widgets/Sidebar/ui/SidebarItem/SidebarItem';
 import { useSelector } from 'react-redux';
 import cls from './Sidebar.module.scss';

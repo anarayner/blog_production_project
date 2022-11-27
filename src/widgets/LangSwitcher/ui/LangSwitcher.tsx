@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button';
-import { ButtonTheme } from 'shared/ui/Button/ui/Button';
+import { ButtonTheme } from 'shared/ui/Button/Button';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 
