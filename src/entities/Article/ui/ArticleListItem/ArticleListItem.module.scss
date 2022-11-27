@@ -15,8 +15,6 @@
 
     .date {
         margin-left: auto;
-        padding: 5px;
-        background: var(--bg-color);
         color: var(--primary-color);
     }
 
@@ -50,9 +48,13 @@
 
     .date {
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 2px;
+        top: 4px;
         display: none;
+        padding: 2px 8px;
+        background: var(--card-bg);
+        color: var(--primary-color);
+        border-radius: 10px;
     }
 
     &:hover {

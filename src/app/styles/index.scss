@@ -18,14 +18,12 @@ body {
 
 .content-page {
     display: flex;
-    justify-content: center;
 }
 
 .page-wrapper {
     flex-grow: 1;
-    padding: 20px 80px;
     height: calc(100vh - var(--navbar-height));
     overflow: auto;
-    width: 100%;
+    width: calc(100% - var(--sidebar-width));
     justify-content: center;
 }

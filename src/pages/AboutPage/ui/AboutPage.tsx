@@ -1,9 +1,10 @@
 import React from 'react';
+import { Page } from 'shared/ui/Page/Page';
 
 const AboutPage = () => (
-    <div>
+    <Page>
         About
-    </div>
+    </Page>
 );
 
 export default AboutPage;
