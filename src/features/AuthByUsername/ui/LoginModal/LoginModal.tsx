@@ -2,7 +2,6 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Modal } from 'shared/ui/Modal/Modal';
 import { useTranslation } from 'react-i18next';
 import { Suspense } from 'react';
-import { Loader } from 'shared/ui/Loader/ui/Loader';
 import { PageLoader } from 'widgets/PageLoader/PageLoader';
 import { LoginFormAsync } from '../LoginForm/LoginForm.async';
 
