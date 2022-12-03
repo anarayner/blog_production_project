@@ -535,6 +535,12 @@
       "userId": "1",
       "text": "comment 2",
       "id": "Wpy7_j2"
+    },
+    {
+      "articleId": "15",
+      "userId": "1",
+      "text": "comment",
+      "id": "jj6S31M"
     }
   ],
   "users": [
@@ -561,7 +567,7 @@
       "age": 24,
       "currency": "USD",
       "country": "United State",
-      "city": "Chattanooga",
+      "city": "Seattle",
       "username": "admin",
       "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
     },
