@@ -7,6 +7,7 @@
   "Choose currency": "",
   "City": "City",
   "Comments": "Comments",
+  "Create new article": "",
   "EN": "EN",
   "Edit": "Edit",
   "Error": "Error",
@@ -20,6 +21,7 @@
   "Page not found": "Page not found",
   "Page not founded": "Page not founded",
   "Profile": "Profile",
+  "RAYNER": "",
   "Read more": {
     "": {
       "": {
@@ -38,6 +40,7 @@
   },
   "Try to reload the page": "Try to reload the page",
   "Username": "Username",
+  "VICTORIA RAYNER": "VICTORIA RAYNER",
   "Your age": "Your age",
   "by": "by",
   "created at": "created at",
@@ -48,8 +51,12 @@
   "Все статьи": "",
   "Комментарии": "Комментарии",
   "Комментарии отсутствуют": "Комментарии отсутствуют",
+  "Назад к списку": "",
   "Наука": "",
   "Поиск": "",
+  "Редактирование статьи с ID = ": "",
+  "Редактировать": "",
+  "Создание новой статьи": "",
   "Сортировать ПО": "Сортировать ПО",
   "Статьи не найдены": "",
   "Статья не найдена": "Статья не найдена",
