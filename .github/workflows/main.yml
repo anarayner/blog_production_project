@@ -20,7 +20,7 @@ jobs:
       - name: install modules
         run: npm install
       - name: build production project
-        run: npm run prod
+        run: npm run build:prod
         if: always()
       - name: linting typescript
         run: npm run eslint
