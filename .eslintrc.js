@@ -20,8 +20,10 @@ module.exports = {
         'react',
         '@typescript-eslint',
         'react-hooks',
+        'rayner-plugin',
     ],
     rules: {
+        'rayner-plugin/path-checker': 'error',
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         'react/jsx-filename-extension': [2,

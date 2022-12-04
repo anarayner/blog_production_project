@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
 import { counterActions } from '../model/slice/CounterSlice';
 
-const Counter = () => {
+export const Counter = () => {
     const dispatch = useDispatch();
     const counterValue = useSelector(getCounterValue);
     const increment = () => {
@@ -26,4 +26,3 @@ const Counter = () => {
         </div>
     );
 };
-export default Counter;

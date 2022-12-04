@@ -1,8 +1,8 @@
-import {
-    profileActions, profileReducer, ProfileSchema, updateProfileData, ValidateProfileError,
-} from 'entities/Profile';
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
+import { updateProfileData } from '../services/updateProfileData/updateProfileData';
+import { ProfileSchema } from '../types/profile';
+import { profileActions, profileReducer } from './profileSlice';
 
 const data = {
     id: '1',

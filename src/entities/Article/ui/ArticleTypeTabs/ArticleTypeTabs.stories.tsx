@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { ArticleTypeTabs } from './ArticleTypeTabs';
 
 export default {

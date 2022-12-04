@@ -4,21 +4,21 @@ import { memo, useCallback } from 'react';
 import {
     ArticleSortField, ArticleType, ArticleView, ArticleViewSelector,
 } from 'entities/Article';
-import { articlesPageActions } from 'pages/ArticlePage/model/slices/articlesPageSlice';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import {
-    getArticlesPageOrder,
-    getArticlesPageSearch, getArticlesPageSort, getArticlesPageType,
-    getArticlesPageView,
-} from 'pages/ArticlePage/model/selectors/articlesPageSelectors';
 import { useSelector } from 'react-redux';
 import { Input } from 'shared/ui/Input/Input';
 import { Card } from 'shared/ui/Card/Card';
 import { ArticleSortSelector } from 'entities/Article/ui/ArticleSortSelector/ArticleSortSelector';
 import { SortOrder } from 'shared/types';
-import { fetchArticlesList } from 'pages/ArticlePage/model/services/fetchArticlesList/fetchArticlesList';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
 import { ArticleTypeTabs } from 'entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs';
+import {
+    getArticlesPageOrder,
+    getArticlesPageSearch, getArticlesPageSort, getArticlesPageType,
+    getArticlesPageView,
+} from '../../model/selectors/articlesPageSelectors';
+import { articlesPageActions } from '../../model/slices/articlesPageSlice';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import cls from './ArticlePageFilters.module.scss';
 
 interface ArticlePageFiltersProps {
