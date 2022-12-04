@@ -1,4 +1,4 @@
-import { counterReducer, counterActions } from './counterSlice';
+import { counterReducer, counterActions } from './CounterSlice';
 import { CounterSchema } from '../types/counterSchema';
 
 describe('CounterSlice.test', () => {
