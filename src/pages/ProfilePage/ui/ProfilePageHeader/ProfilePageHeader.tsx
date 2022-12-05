@@ -10,7 +10,7 @@ import {
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useCallback } from 'react';
 import { getUserAuthData } from 'entities/User';
-import cls from './ProfilePageHeader.module.scss';
+import { HStack } from 'shared/ui/Stack';
 
 interface ProfilePageHeaderProps {
     className?: string;
@@ -39,25 +39,23 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+        <HStack justify="between" max className={classNames('', {}, [className])}>
             <Text title={t('Profile')} />
             {canEdit && (
-                <div className={cls.editBtn}>
+                <div>
                     {readonly
                         ? (
                             <Button
                                 theme={ButtonTheme.OUTLINE}
-                                className={cls.editBtn}
                                 onClick={onEdit}
                             >
                                 {t('Edit')}
                             </Button>
                         )
                         : (
-                            <div className={cls.editBtn}>
+                            <HStack gap="8">
                                 <Button
                                     theme={ButtonTheme.OUTLINE_RED}
-                                    className={cls.cancelBtn}
                                     onClick={onCanselEdit}
                                 >
                                     {t('Cancel')}
@@ -68,11 +66,11 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
                                 >
                                     {t('Save')}
                                 </Button>
-                            </div>
+                            </HStack>
                         )}
                 </div>
             )}
 
-        </div>
+        </HStack>
     );
 };
