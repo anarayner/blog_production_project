@@ -7,7 +7,9 @@
   "Choose currency": "Choose currency",
   "City": "City",
   "Comments": "Comments",
+  "Country": "Country",
   "Create new article": "Create new article",
+  "Currency": "Currency",
   "EN": "EN",
   "Edit": "Edit",
   "Error": "Error",
@@ -60,6 +62,7 @@
   "Сортировать ПО": "Сортировать ПО",
   "Статьи не найдены": "Статьи не найдены",
   "Статья не найдена": "Статья не найдена",
+  "Укажите валюту": "Укажите валюту",
   "Читать далее": {
     "": {
       "": {
