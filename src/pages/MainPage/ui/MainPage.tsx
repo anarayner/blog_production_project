@@ -1,12 +1,10 @@
 import React from 'react';
-import { BugButton } from 'app/providers/ErrorBoundary';
+import { Page } from 'widgets/Page/Page';
 
 const MainPage = () => (
-    <div>
-        <div style={{ color: 'red' }}>TEST</div>
+    <Page>
         Main check
-        <BugButton />
-    </div>
+    </Page>
 );
 
 export default MainPage;
