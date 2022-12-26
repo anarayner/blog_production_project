@@ -5,7 +5,7 @@ import { ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
 import { Input } from 'shared/ui/Input/Input';
-import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { Text, TextSize, TextTheme } from 'shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
@@ -57,6 +57,8 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         >
             <div className={classNames(cls.LoginForm, {}, [className])}>
                 <Text theme={TextTheme.PRIMARY} title={t('Login')} />
+                <Text theme={TextTheme.PRIMARY} title="login: user" size={TextSize.S} />
+                <Text theme={TextTheme.PRIMARY} title="password: user" size={TextSize.S} />
                 {error && <Text theme={TextTheme.ERROR} text={error} />}
                 <Input
                     type="text"

@@ -10,6 +10,7 @@ export enum ArticleBlockType {
     CODE = 'CODE',
     IMAGE = 'IMAGE',
     TEXT = 'TEXT',
+    LINK = 'LINK'
 }
 
 export interface ArticleBlockBase {
@@ -34,7 +35,14 @@ export interface ArticleTextBlock extends ArticleBlockBase {
     title?: string;
 }
 
-export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock;
+export interface ArticleLinkBlock extends ArticleBlockBase {
+    type: ArticleBlockType.LINK;
+    paragraphs: string[];
+    title?: string;
+    link: string;
+}
+
+export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock | ArticleLinkBlock;
 
 export enum ArticleType {
     ALL = 'ALL',
@@ -58,4 +66,23 @@ export interface Article {
     user: User;
     type: ArticleType[];
     blocks: ArticleBlock[];
+}
+
+export interface ProjectsArticle {
+    id: string;
+    title: string;
+    subtitle: string;
+    img: string;
+    blocks: ArticleBlock[];
+    skills: string[];
+}
+
+export interface PublicArticle {
+    id: string;
+    title: string;
+    subtitle: string;
+    img: string;
+    blocks: ArticleBlock[];
+    skills: Array<any>;
+    projects: ProjectsArticle[];
 }

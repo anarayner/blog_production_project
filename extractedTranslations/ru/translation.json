@@ -1,4 +1,5 @@
 {
+  "": "",
   "An error occurred while loading the profile": "An error occurred while loading the profile",
   "Avatar link": "Avatar link",
   "Back": "Back",
@@ -13,6 +14,7 @@
   "EN": "EN",
   "Edit": "Edit",
   "Error": "Error",
+  "Experience": "Experience",
   "First Name": "First Name",
   "High to Low": "High to Low",
   "Last Name": "Last Name",
@@ -36,6 +38,7 @@
   "Save": "Save",
   "Search": "Search",
   "Sign in": "Sign in",
+  "Skills": "Skills",
   "Sort by": "Sort by",
   "There was an error loading the article": {
     "": ""

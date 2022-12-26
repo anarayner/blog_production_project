@@ -7,20 +7,32 @@ export enum CardTheme {
     OUTLINED = 'outlined',
 }
 
+export const enum Padding {
+    NONE = 'padding_0',
+    S = 'padding_10',
+    M = 'padding_20',
+
+}
+
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
     className?: string;
     children: ReactNode;
     theme?: CardTheme;
+    padding?: Padding;
 }
 
 export const Card = memo((props: CardProps) => {
     const {
-        className, children, theme = CardTheme.NORMAL, ...otherProps
+        className,
+        children,
+        theme = CardTheme.NORMAL,
+        padding = Padding.M,
+        ...otherProps
     } = props;
 
     return (
         <div
-            className={classNames(cls.Card, {}, [className, cls[theme]])}
+            className={classNames(cls.Card, {}, [className, cls[theme], cls[padding]])}
             {...otherProps}
         >
             {children}

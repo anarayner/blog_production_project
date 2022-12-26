@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback } from 'react';
+import { CSSProperties, memo, useCallback } from 'react';
 import { ArticleList } from 'entities/Article';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
@@ -30,7 +30,7 @@ const ArticlePage = ({ className }: ArticlePageProps) => {
     const isLoading = useSelector(getArticlesPageIsLoading);
     const view = useSelector(getArticlesPageView);
     const [searchParams] = useSearchParams();
-
+    console.log(articles);
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlesPage());
     }, [dispatch]);
@@ -52,6 +52,14 @@ const ArticlePage = ({ className }: ArticlePageProps) => {
                     articles={articles}
                     className={cls.list}
                 />
+                {/* <List */}
+                {/*    height={150} */}
+                {/*    itemCount={1000} */}
+                {/*    itemSize={35} */}
+                {/*    width={300} */}
+                {/* > */}
+                {/*    {Row} */}
+                {/* </List> */}
             </Page>
         </DynamicModuleLoader>
 

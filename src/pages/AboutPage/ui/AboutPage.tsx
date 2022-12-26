@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Page } from 'widgets/Page/Page';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 
-const AboutPage = () => (
-    <Page>
-        About
-    </Page>
-);
+const AboutPage = () => {
+    const dispatch = useAppDispatch();
+
+    return (
+
+        <Page>
+            About
+        </Page>
+
+    );
+};
 
 export default AboutPage;

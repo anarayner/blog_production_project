@@ -5,6 +5,7 @@ import { createReducerManager } from 'app/providers/StoreProvider/config/reducer
 import { $api } from 'shared/api/api';
 import { CombinedState, Reducer } from 'redux';
 import { scrollSaveReducer } from 'features/scrollSave';
+import { articlePortfolioReducer } from 'entities/PublicArticle/model/slice/AtriclePortfolioSlice';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 
 export function createReduxStore(
@@ -16,6 +17,7 @@ export function createReduxStore(
         counter: counterReducer,
         user: userReducer,
         scrollSave: scrollSaveReducer,
+        portfolio: articlePortfolioReducer,
     };
 
     const reducerManager = createReducerManager(rootReducers);
