@@ -138,7 +138,7 @@ export const ArticlePortfolio = memo(({ className }: ArticleDetailsProps) => {
                             <Card
                                 theme={CardTheme.OUTLINED}
                                 className={cls.tab}
-                                key={tab.value}
+                                key={tab}
                                 padding={Padding.S}
                             >
                                 {tab}

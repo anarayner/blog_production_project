@@ -1,7 +1,8 @@
 import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
+// eslint-disable-next-line rayner-plugin/path-checker
+import { ProfileSchema } from 'features/editableProfileCard';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
-import { ProfileSchema } from '../types/profile';
 import { profileActions, profileReducer } from './profileSlice';
 
 const data = {

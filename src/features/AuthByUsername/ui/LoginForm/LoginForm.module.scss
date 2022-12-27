@@ -12,3 +12,11 @@
     margin-top: 20px;
     margin-left: auto;
 }
+
+@media (max-width: 761px) {
+    .LoginForm {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+}

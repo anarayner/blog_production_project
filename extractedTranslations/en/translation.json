@@ -18,6 +18,9 @@
   "First Name": "First Name",
   "High to Low": "High to Low",
   "Last Name": "Last Name",
+  "Loading articles error": {
+    "": ""
+  },
   "Log out": "",
   "Login": "Login",
   "Low to High": "Low to High",
@@ -25,6 +28,7 @@
   "Page not found": "Page not found",
   "Page not founded": "Page not founded",
   "Profile": "Profile",
+  "Profile not found": "Profile not found",
   "RAYNER": "",
   "Read more": {
     "": {
@@ -59,6 +63,7 @@
   "Назад к списку": "",
   "Наука": "",
   "Поиск": "",
+  "Профиль не найден": "Профиль не найден",
   "Редактирование статьи с ID = ": "",
   "Редактировать": "",
   "Создание новой статьи": "",
