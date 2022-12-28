@@ -1,4 +1,69 @@
 {
+  "portfolio": {
+    "id": "4",
+    "title": "Victoria Rayner",
+    "subtitle": "Frontend/ Full Stack Software Engineer",
+    "img": "https://www.edology.com/uploads/media/sulu-700x450/00/1720-blog-why-coding-is-so-important-for-IT-jobs-s.jpg?v=2-0",
+    "skills": ["JavaScript", "React.js", "Typescript", "Redux", "MobX", "Node.js", "Express", "Webpack", "Jest", "React testing library", "ESLint",
+      "Storybook", "HTML", "CSS", "SCSS", "Java", "Next.js", "Svelte", "PostgreSQL", "MongoDB", "Bootstrap", "Material UI", "Heroku", "Vercel",
+      "Netlify"
+    ],
+    "blocks": [
+      {
+        "id": "1",
+        "type": "TEXT",
+        "title": "About",
+        "paragraphs": [
+          "Frontend Software Engineer with a result-oriented mindset, analytical thinking, passion for creative solutions, an interest in new opportunities, and a great communicator. Coming with sound knowledge of computer system analysis, design, testing, and debugging. Successfully designed, built, and delivered several full-stack projects. Strong attention to detail in order to provide high-quality products."
+        ]
+      },
+      {
+        "id": "2",
+        "type": "TEXT",
+        "title": "Experience",
+        "paragraphs": [
+          "Feb 2020 - Present"
+        ]
+      },
+      {
+        "id": "3",
+        "type": "LINK",
+        "link": "http://localhost:3000",
+        "title": "GamesRound (Startup) — Online platform for gaming industry",
+        "paragraphs": [
+          "Developed, modified and test web software applications. participated in the design of efficient and reusable front-end systems that drive complex web applications. Added features to existing functionality and maintain legacy code with bug fixes. Collaborated with other Software Engineers to deliver compelling user-facing products. Developed React/Typescript functional and class components without using libraries, developed complex design-based interfaces, or functional specifications. Stylized components with the Less preprocessor. Managed the global state using Redux. Technologies: React, Typescript, Redux, Css/Less"
+        ]
+      },
+      {
+        "id": "4",
+        "type": "TEXT",
+        "title": "Blog production project — FrontEnd",
+        "paragraphs": [
+          "Worked with full project configuration from scratch (Webpack). Configured React, Typescript, Babel, scss, css modules, jest, rtl, storybook, loki. Developed a library of accessible, semantic and reusable components.", "Used Feature-Sliced Design architecture.", "Optimized code with Throttle and debounce. Analyzed bundle size. Developed asynchronous components, asynchronous Redux reducers. Developed a small library for implementing asynchronous reducers. Implemented 3 color themes for application and adaptive interface design."
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "id": "1",
+        "title": "Blog production project",
+        "subtitle": "Frontend/ Full Stack Software Engineer",
+        "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+        "skills": ["JavaScript", "React.js", "Typescript"],
+
+        "blocks": [
+          {
+            "id": "1",
+            "type": "TEXT",
+            "title": "Заголовок этого блока",
+            "paragraphs": [
+              "Worked with full project configuration from scratch (Webpack). Configured React, Typescript, Babel, scss, css modules, jest, rtl, storybook, loki. Developed a library of accessible, semantic and reusable components.", "Used Feature-Sliced Design architecture.", "Optimized code with Throttle and debounce. Analyzed bundle size. Developed asynchronous components, asynchronous Redux reducers. Developed a small library for implementing asynchronous reducers. Implemented 3 color themes for application and adaptive interface design."
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "posts": [
     {
       "id": "1",
@@ -535,12 +600,6 @@
       "userId": "1",
       "text": "comment 2",
       "id": "Wpy7_j2"
-    },
-    {
-      "articleId": "15",
-      "userId": "1",
-      "text": "comment",
-      "id": "jj6S31M"
     }
   ],
   "users": [
@@ -548,14 +607,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
     },
     {
       "id": "2",
       "username": "user_eva",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://www.bleepstatic.com/content/hl-images/2022/05/12/evil-hacker-ai.jpg"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "user",
+      "roles": ["USER"],
       "avatar": "https://www.bleepstatic.com/content/hl-images/2022/05/12/evil-hacker-ai.jpg"
     }
   ],
@@ -565,9 +631,9 @@
       "first": "Victoria",
       "lastname": "Rayner",
       "age": 24,
-      "currency": "EUR",
+      "currency": "USD",
       "country": "United State",
-      "city": "Seattle",
+      "city": "Chattanooga",
       "username": "admin",
       "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
     },

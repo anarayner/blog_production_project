@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { VStack } from 'shared/ui/Stack';
+import { ValidateProfileError } from '../../model/types/editableProfileCardSchema';
 import {
     EditableProfileCardHeader,
 } from '../../ui/EditableProfileCardHeader/EditableProfileCardHeader';
@@ -44,8 +45,16 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         profile: profileReducer,
     };
 
+    const validateErrorTranslates = {
+        [ValidateProfileError.SERVER_ERROR]: t('Saving server error'),
+        [ValidateProfileError.INCORRECT_COUNTRY]: t('Incorrect county'),
+        [ValidateProfileError.NO_DATA]: t('No data'),
+        [ValidateProfileError.INCORRECT_USER_DATA]: t('First name and Last name required'),
+        [ValidateProfileError.INCORRECT_AGE]: t('Incorrect age'),
+    };
+
     useEffect(() => {
-        if (__PROJECT__ !== 'storybook' && id) {
+        if (__PROJECT__ !== 'storybook' && __PROJECT__ !== 'jest' && id) {
             dispatch(fetchProfileData(id));
         }
     }, [dispatch, id]);
@@ -89,7 +98,12 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
                 className={classNames(cls.EditableProfileCard, {}, [className])}
             >
                 {validateErrors?.length && validateErrors.map((err) => (
-                    <Text key={err} theme={TextTheme.ERROR} text={err} />
+                    <Text
+                        key={err}
+                        theme={TextTheme.ERROR}
+                        text={validateErrorTranslates[err]}
+                        data-testid="EditableProfileCard.Error"
+                    />
                 ))}
                 <EditableProfileCardHeader />
                 <ProfileCard

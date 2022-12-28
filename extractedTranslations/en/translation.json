@@ -1,5 +1,6 @@
 {
   "": "",
+  "Admin panel": "Admin panel",
   "An error occurred while loading the profile": "An error occurred while loading the profile",
   "Avatar link": "Avatar link",
   "Back": "Back",
@@ -16,7 +17,10 @@
   "Error": "Error",
   "Experience": "Experience",
   "First Name": "First Name",
+  "First name and Last name required": "",
   "High to Low": "High to Low",
+  "Incorrect age": "",
+  "Incorrect county": "",
   "Last Name": "Last Name",
   "Loading articles error": {
     "": ""
@@ -25,6 +29,7 @@
   "Login": "Login",
   "Low to High": "Low to High",
   "No comments": "No comments",
+  "No data": "",
   "Page not found": "Page not found",
   "Page not founded": "Page not founded",
   "Profile": "Profile",
@@ -40,6 +45,7 @@
   "Recommendations": "",
   "Reload": "Reload",
   "Save": "Save",
+  "Saving server error": "",
   "Search": "Search",
   "Sign in": "Sign in",
   "Skills": "Skills",
@@ -56,6 +62,7 @@
   "error": "error",
   "title": "title",
   "views": "views",
+  "Админ панель": "Админ панель",
   "Айти": "",
   "Все статьи": "",
   "Комментарии": "Комментарии",
@@ -70,6 +77,7 @@
   "Сортировать ПО": "Сортировать ПО",
   "Статьи не найдены": "",
   "Статья не найдена": "Статья не найдена",
+  "У вас нет доступа к этой странице": "У вас нет доступа к этой странице",
   "Укажите валюту": "",
   "Читать далее": {
     "": {

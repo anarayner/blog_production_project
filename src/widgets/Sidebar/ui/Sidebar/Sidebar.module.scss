@@ -15,6 +15,7 @@
     right: -37px;
     bottom: 37px;
     border-radius: 20px;
+    z-index: 1000;
 }
 
 .items {
@@ -43,4 +44,14 @@
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
+}
+
+@media (max-width: 761px) {
+    .Sidebar {
+        height: calc(100vh - var(--navbar-height));
+        width: var(--sidebar-width-collapsed);
+        background: var(--inverted-bg-color);
+        position: relative;
+        transition: width 0.5s;
+    }
 }
