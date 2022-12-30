@@ -9,7 +9,6 @@ import { useSelector } from 'react-redux';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { VStack } from 'shared/ui/Stack';
-import { ValidateProfileError } from '../../model/types/editableProfileCardSchema';
 import {
     EditableProfileCardHeader,
 } from '../../ui/EditableProfileCardHeader/EditableProfileCardHeader';
@@ -25,6 +24,7 @@ import {
     getProfileIsLoading,
 } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
 import cls from './EditableProfileCard.module.scss';
+import { ValidateProfileError } from '../../model/const/const';
 
 interface EditableProfileCardProps {
     className?: string;

@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
-    memo, useCallback, useEffect, useState,
+    memo, useCallback, useEffect,
 } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
@@ -12,6 +12,7 @@ import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { VStack } from 'shared/ui/Stack';
 import { Card, CardTheme, Padding } from 'shared/ui/Card/Card';
 import { ArticleLinkBlockComponent } from 'entities/Article/ui/ArticleLinkBlockComponent/ArticleLinkBlockComponent';
+import { ArticleBlockType } from 'entities/Article/model/consts/articleConsts';
 import {
     getArticlePortfolioData, getArticlePortfolioDataProjects,
     getArticlePortfolioError,
@@ -19,7 +20,7 @@ import {
 } from '../../model/selectors/articlePortfolio';
 import { fetchArticlePortfolio } from '../../model/services/fetchArticlePortfolio/fetchArticlePortfolio';
 import { articleDetailsReducer } from '../../../Article/model/slice/AtricleDetailsSlice';
-import { ArticleBlock, ArticleBlockType } from '../../../Article/model/types/article';
+import { ArticleBlock } from '../../../Article/model/types/article';
 import { ArticleCodeBlockComponent } from '../../../Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../../../Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../../../Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
