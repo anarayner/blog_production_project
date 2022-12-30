@@ -1,13 +1,12 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { ArticleDetails } from 'entities/Article';
 import { useParams } from 'react-router-dom';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { Page } from 'widgets/Page/Page';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { VStack } from 'shared/ui/Stack';
 import { ArticleRecommendationsList } from 'features/articleRecommendationsList';
+import { useTranslation } from 'react-i18next';
 import { ArticleDetailsComments } from '../../ui/ArticleDetailsComments/ArticleDetailsComments';
 import cls from './ArticleDetailsPage.module.scss';
 import { articleDetailsPageReducer } from '../../model/slices';
@@ -24,15 +23,6 @@ const reducers: ReducersList = {
 export const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { t } = useTranslation();
     const { id } = useParams();
-    const dispatch = useAppDispatch();
-
-    if (!id) {
-        return (
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-                {t('Статья не найдена')}
-            </div>
-        );
-    }
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
