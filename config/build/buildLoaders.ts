@@ -3,8 +3,11 @@ import { BuildOptions } from './types/config';
 import { buildCssLoaders } from './loader/buildCssLoaders';
 import { buildBabelLoaders } from './loader/buildBabelLoaders';
 
-export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
-    const babelLoader = buildBabelLoaders(isDev);
+export function buildLoaders(options: BuildOptions): RuleSetRule[] {
+    const { isDev } = options;
+
+    const codeBabelLoader = buildBabelLoaders({ ...options, isTsx: false });
+    const tsxCodeBabelLoader = buildBabelLoaders({ ...options, isTsx: true });
 
     const svgLoader = {
         test: /\.svg$/i,
@@ -21,19 +24,19 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
         ],
     };
 
-    const typescriptLoader = {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-    };
+    // const typescriptLoader = {
+    //     test: /\.tsx?$/,
+    //     use: 'ts-loader',
+    //     exclude: /node_modules/,
+    // };
 
     const cssLoader = buildCssLoaders(isDev);
 
     return [
         svgLoader,
-        babelLoader,
         fileLoader,
-        typescriptLoader,
+        codeBabelLoader,
+        tsxCodeBabelLoader,
         cssLoader,
     ];
 }
