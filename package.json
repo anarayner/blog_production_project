@@ -98,7 +98,9 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
+    "@react-spring/web": "^9.5.2",
     "@reduxjs/toolkit": "^1.8.0",
+    "@use-gesture/react": "^10.2.19",
     "@types/react-virtualized-auto-sizer": "^1.0.1",
     "@types/react-window": "^1.8.5",
     "axios": "^0.26.1",
