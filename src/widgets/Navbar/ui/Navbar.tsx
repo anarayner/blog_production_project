@@ -4,15 +4,14 @@ import { Button } from 'shared/ui/Button';
 import { ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { LoginModal } from 'features/AuthByUsername';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import {
-    getUserAuthData, isUserAdmin, isUserManager, userActions,
+    getUserAuthData,
 } from 'entities/User';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLinkTheme, AppLink } from 'shared/ui/AppLink/AppLink';
-import { Dropdown } from 'shared/ui/Popups/ui/Dropdown/Dropdown';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { BrowserView } from 'react-device-detect';
 import { HStack } from 'shared/ui/Stack';
 import { NotificationButton } from 'features/notificationButton';
 import { AvatarDropdown } from 'features/avatarDropdown';
@@ -38,11 +37,13 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     if (authData) {
         return (
             <div className={classNames(cls.Navbar, {}, [className])}>
-                <Text
-                    className={cls.appName}
-                    title="VICTORIA RAYNER"
-                    theme={TextTheme.PRIMARY}
-                />
+                <BrowserView>
+                    <Text
+                        className={cls.appName}
+                        title="RAYNER"
+                        theme={TextTheme.PRIMARY}
+                    />
+                </BrowserView>
                 <AppLink
                     to={RoutePath.article_create}
                     theme={AppLinkTheme.PRIMARY}
@@ -61,6 +62,13 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
+            <BrowserView>
+                <Text
+                    className={cls.appName}
+                    title="RAYNER"
+                    theme={TextTheme.PRIMARY}
+                />
+            </BrowserView>
             <Button
                 className={cls.links}
                 theme={ButtonTheme.OUTLINE}

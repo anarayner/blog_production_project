@@ -4,7 +4,7 @@
     background: var(--inverted-bg-color);
     display: flex;
     align-items: center;
-    padding: 20px 50px;
+    padding: 20px;
     border-bottom: var(--border-color) 1px solid;
 }
 
@@ -23,4 +23,8 @@
 
 .actions {
     margin-left: auto;
+}
+
+.createBtn {
+    min-width: 140px;
 }
