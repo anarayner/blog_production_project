@@ -1,18 +1,18 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
     memo, useCallback, useEffect,
 } from 'react';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
-import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { VStack } from 'shared/ui/Stack';
-import { Card, CardTheme, Padding } from 'shared/ui/Card/Card';
-import { ArticleLinkBlockComponent } from 'entities/Article/ui/ArticleLinkBlockComponent/ArticleLinkBlockComponent';
-import { ArticleBlockType } from 'entities/Article/model/consts/articleConsts';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
+import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { VStack } from '@/shared/ui/Stack';
+import { Card, CardTheme, Padding } from '@/shared/ui/Card/Card';
+import { ArticleLinkBlockComponent } from '@/entities/Article/ui/ArticleLinkBlockComponent/ArticleLinkBlockComponent';
+import { ArticleBlockType } from '@/entities/Article/model/consts/articleConsts';
 import {
     getArticlePortfolioData, getArticlePortfolioDataProjects,
     getArticlePortfolioError,

@@ -28,8 +28,11 @@
     --sidebar-width: 300px;
     --sidebar-width-mobile: 150px;
     --sidebar-width-collapsed: 90px;
-    --modal-z-index: 10;
     --overlay-color: rgba(0 0 0 / 55%);
     --red-light: rgb(236 31 31);
     --red-dark: rgb(192 6 6);
+
+    // z-index
+    --modal-z-index: 1000;
+    --ovelay-z-index: 100;
 }

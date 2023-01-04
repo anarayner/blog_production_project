@@ -1,6 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { ThunkConfig } from 'app/providers/StoreProvider';
 import axios from 'axios';
+import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { PublicArticle } from '../../../../Article/model/types/article';
 
 export const fetchArticlePortfolio = createAsyncThunk<

@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { FC, ReactNode, useEffect } from 'react';
-import { ReduxStoreWithManager, StateSchemaKey } from 'app/providers/StoreProvider/config/StateSchema';
 import { useDispatch, useStore } from 'react-redux';
 import { Reducer } from '@reduxjs/toolkit';
+import { ReduxStoreWithManager, StateSchemaKey } from '@/app/providers/StoreProvider/config/StateSchema';
 
 export type ReducersList = {
     [reducerKey in StateSchemaKey]?: Reducer;

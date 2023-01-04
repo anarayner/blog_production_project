@@ -1,7 +1,7 @@
-import { StateSchema } from 'app/providers/StoreProvider';
 import { AsyncThunkAction } from '@reduxjs/toolkit';
-import { loginByUsername } from 'features/AuthByUsername/model/services/loginByUsername';
 import axios, { AxiosStatic } from 'axios';
+import { StateSchema } from '@/app/providers/StoreProvider';
+import { loginByUsername } from '@/features/AuthByUsername/model/services/loginByUsername';
 import MockedFunctionDeep = jest.MockedFunctionDeep;
 
 type ActionCreatorType<Return, Arg, RejectedValue> =

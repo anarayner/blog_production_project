@@ -50,12 +50,6 @@
     }
 }
 
-.isClosing {
-    .content {
-        transform: translateY(100%);
-    }
-}
-
 .sheet {
     z-index: var(--modal-z-index);
     position: fixed;

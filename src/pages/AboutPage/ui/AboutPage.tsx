@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { Page } from 'widgets/Page/Page';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
+import React from 'react';
+import { Page } from '@/widgets/Page/Page';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 
 const AboutPage = () => {
     const dispatch = useAppDispatch();

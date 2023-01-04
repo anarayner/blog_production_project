@@ -15,7 +15,7 @@
     right: -37px;
     bottom: 37px;
     border-radius: 20px;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .items {
@@ -53,5 +53,9 @@
         background: var(--inverted-bg-color);
         position: relative;
         transition: width 0.5s;
+    }
+
+    .collapsedBtn {
+        display: none;
     }
 }

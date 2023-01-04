@@ -1,7 +1,7 @@
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
 // eslint-disable-next-line rayner-plugin/path-checker
-import { ProfileSchema } from 'features/editableProfileCard';
+import { ProfileSchema } from '@/features/editableProfileCard';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 import { profileActions, profileReducer } from './profileSlice';
 

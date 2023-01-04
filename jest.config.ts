@@ -82,6 +82,7 @@ export default {
     moduleNameMapper: {
         '\\.(css|scss)$': 'identity-obj-proxy',
         '\\.svg': '<rootDir>config/jest/__mocks__/JestEmptyComponent',
+        '^@/(.*)$': '<rootDir>/src/$1',
     },
 
     // An array of file extensions your modules use
