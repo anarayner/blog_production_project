@@ -1,14 +1,13 @@
 .input {
-    width: 100%;
     padding: 5px 7px;
     border-radius: 5px;
     border: none;
+    width: 120px;
     color: #0d0d2b;
 }
 
 .readonly {
     .input {
-        width: 100%;
         border: none;
         color: var(--primary-color);
         background-color: var(--bg-color);
@@ -18,10 +17,15 @@
 .placeholder {
     display: flex;
     align-items: center;
-    width: 200px;
+    width: 120px;
 }
 
 .with_placeholder {
     display: flex;
-    justify-content: space-between;
+}
+
+@media (max-width: 389px) {
+    .placeholder {
+        width: 100px;
+    }
 }

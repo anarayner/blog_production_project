@@ -59,3 +59,16 @@
         display: none;
     }
 }
+
+@media (max-width: 425px) {
+    .Sidebar {
+        width: var(--sidebar-width-collapsed-mobile);
+    }
+
+    .items {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 25px;
+    }
+}
