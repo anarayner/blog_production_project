@@ -2,7 +2,7 @@
     padding: 5px 7px;
     border-radius: 5px;
     border: none;
-    width: 120px;
+    width: 100%;
     color: #0d0d2b;
 }
 
@@ -11,6 +11,10 @@
         border: none;
         color: var(--primary-color);
         background-color: var(--bg-color);
+    }
+
+    .input:focus {
+        border-color: red;
     }
 }
 
