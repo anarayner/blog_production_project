@@ -7,7 +7,6 @@ const ProjectsPage = () => {
     const dispatch = useAppDispatch();
 
     return (
-
         <Page>
             Coming soon..
             <RatingCard
@@ -15,8 +14,8 @@ const ProjectsPage = () => {
                 feedbackTitle="Please leave your feedback"
                 hasFeedback
             />
-        </Page>
 
+        </Page>
     );
 };
 

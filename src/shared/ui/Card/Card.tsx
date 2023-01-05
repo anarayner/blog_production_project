@@ -19,6 +19,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
     children: ReactNode;
     theme?: CardTheme;
     padding?: Padding;
+    max?: boolean;
 }
 
 export const Card = memo((props: CardProps) => {
@@ -27,12 +28,13 @@ export const Card = memo((props: CardProps) => {
         children,
         theme = CardTheme.NORMAL,
         padding = Padding.M,
+        max,
         ...otherProps
     } = props;
 
     return (
         <div
-            className={classNames(cls.Card, {}, [className, cls[theme], cls[padding]])}
+            className={classNames(cls.Card, { [cls.max]: max }, [className, cls[theme], cls[padding]])}
             {...otherProps}
         >
             {children}
