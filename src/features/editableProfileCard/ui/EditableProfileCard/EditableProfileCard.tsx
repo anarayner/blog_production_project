@@ -46,7 +46,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     };
 
     const validateErrorTranslates = {
-        [ValidateProfileError.SERVER_ERROR]: t('Saving server error'),
+        [ValidateProfileError.SERVER_ERROR]: t('The server is under development. This action is temporarily unavailable'),
         [ValidateProfileError.INCORRECT_COUNTRY]: t('Incorrect county'),
         [ValidateProfileError.NO_DATA]: t('No data'),
         [ValidateProfileError.INCORRECT_USER_DATA]: t('First name and Last name required'),

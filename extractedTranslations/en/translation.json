@@ -8,6 +8,12 @@
   "Choose country": "",
   "Choose currency": "",
   "City": "City",
+  "Close": "Close",
+  "Coming soon": {
+    "": {
+      "": ""
+    }
+  },
   "Comments": "Comments",
   "Country": "",
   "Create new article": "",
@@ -47,10 +53,14 @@
   "Save": "Save",
   "Saving server error": "",
   "Search": "Search",
+  "Send": "Send",
   "Sign in": "Sign in",
   "Skills": "Skills",
   "Sorry, You Are Not Allowed to Access This Page": "Sorry, You Are Not Allowed to Access This Page",
   "Sort by": "Sort by",
+  "The server is under development": {
+    " This action is temporarily unavailable": " This action is temporarily unavailable"
+  },
   "There was an error loading the article": {
     "": ""
   },
@@ -59,6 +69,7 @@
   "VICTORIA RAYNER": "VICTORIA RAYNER",
   "You do not an acsess to this page": "You do not an acsess to this page",
   "Your age": "Your age",
+  "Your feedback": "Your feedback",
   "by": "by",
   "created at": "created at",
   "error": "error",
@@ -66,11 +77,14 @@
   "views": "views",
   "Админ панель": "Админ панель",
   "Айти": "",
+  "Ваш отзыв": "",
   "Все статьи": "",
+  "Закрыть": "",
   "Комментарии": "Комментарии",
   "Комментарии отсутствуют": "Комментарии отсутствуют",
   "Назад к списку": "",
   "Наука": "",
+  "Отправить": "",
   "Поиск": "",
   "Профиль не найден": "Профиль не найден",
   "Редактирование статьи с ID = ": "",

@@ -17,9 +17,9 @@ export const getSidebarItems = createSelector(
                 text: 'Main',
             },
             {
-                path: RoutePath.about,
+                path: RoutePath.projects,
                 Icon: AboutIcon,
-                text: 'About',
+                text: 'Projects',
             },
         ];
 

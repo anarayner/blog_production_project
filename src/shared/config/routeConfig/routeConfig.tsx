@@ -1,6 +1,6 @@
 import { RouteProps } from 'react-router-dom';
 import { MainPage } from '@/pages/MainPage';
-import { AboutPage } from '@/pages/AboutPage';
+import { ProjectsPage } from '@/pages/ProjectsPage';
 import { NotFoundPage } from '@/pages/NotFoundPage';
 import { ProfilePage } from '@/pages/ProfilePage';
 import { ArticlePage } from '@/pages/ArticlePage';
@@ -17,7 +17,7 @@ export type AppRouteSProps = RouteProps & {
 
 export enum AppRoutes {
     MAIN = 'main',
-    ABOUT = 'about',
+    PROJECTS = 'projects',
     PROFILE = 'profile',
     ARTICLE = 'article',
     ARTICLE_DETAILS = 'article_details',
@@ -31,7 +31,7 @@ export enum AppRoutes {
 // объект, в котором для каждого enum укажем путь до компонента
 export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',
-    [AppRoutes.ABOUT]: '/about',
+    [AppRoutes.PROJECTS]: '/projects',
     [AppRoutes.PROFILE]: '/profile/', // + :id
     [AppRoutes.ARTICLE]: '/articles',
     [AppRoutes.ARTICLE_DETAILS]: '/articles/', // + :id
@@ -48,9 +48,9 @@ export const routeConfig: Record<AppRoutes, AppRouteSProps> = {
         path: RoutePath.main,
         element: <MainPage />,
     },
-    [AppRoutes.ABOUT]: {
-        path: RoutePath.about,
-        element: <AboutPage />,
+    [AppRoutes.PROJECTS]: {
+        path: RoutePath.projects,
+        element: <ProjectsPage />,
     },
     [AppRoutes.PROFILE]: {
         path: `${RoutePath.profile}:id`,
