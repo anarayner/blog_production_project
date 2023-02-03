@@ -5,7 +5,7 @@ import { userReducer } from '@/entities/User';
 import { createReducerManager } from '@/app/providers/StoreProvider/config/reducerManager';
 import { $api } from '@/shared/api/api';
 import { scrollSaveReducer } from '@/features/scrollSave';
-import { articlePortfolioReducer } from '@/entities/PublicArticle/model/slice/AtriclePortfolioSlice';
+import { articlePortfolioReducer } from '@/entities/PublicArticle';
 import { rtkApi } from '@/shared/api/rtkApi';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 

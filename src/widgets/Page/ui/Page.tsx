@@ -7,16 +7,18 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getScrollSaveByPath, scrollSaveActions } from '@/features/scrollSave';
-import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
 import cls from './Page.module.scss';
+import { TestProps } from '@/shared/types/tests';
 
-interface PageProps {
+interface PageProps extends TestProps {
     className?: string;
     children: ReactNode;
     onScrollEnd?: () => void;
 }
+
+export const PAGE_ID = 'PAGE_ID';
 
 export const Page = memo((props: PageProps) => {
     const { className, children, onScrollEnd } = props;
@@ -47,13 +49,15 @@ export const Page = memo((props: PageProps) => {
     }, 700);
 
     return (
-        <section
+        <main
             ref={wrapperRef}
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
+            id={PAGE_ID}
+            data-cy={props['data-cy'] ?? 'Page'}
         >
             {children}
             {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
-        </section>
+        </main>
     );
 });

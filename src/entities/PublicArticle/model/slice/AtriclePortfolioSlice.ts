@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { PublicArticle } from '@/entities/Article/model/types/article';
+import { PublicArticle } from '@/entities/Article';
 import { fetchArticlePortfolio } from '../../model/services/fetchArticlePortfolio/fetchArticlePortfolio';
 import { ArticlePortfolioSchema } from '../types/articlePortfolioSchema';
 

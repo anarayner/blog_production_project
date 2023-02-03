@@ -32,6 +32,9 @@ export default ({ config } : {config: webpack.Configuration}) => {
         __API__: JSON.stringify('https://testapi.com'),
         __PROJECT__: JSON.stringify('storybook'),
     }));
-    config!.resolve!.alias = { '@': path.resolve(__dirname, '..', '..', 'src') };
+    config!.resolve!.alias = {
+        ...config!.resolve!.alias,
+        '@': path.resolve(__dirname, '..', '..', 'src'),
+    };
     return config;
 };

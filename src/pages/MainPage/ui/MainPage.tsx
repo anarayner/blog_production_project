@@ -1,9 +1,9 @@
 import React from 'react';
-import { Page } from '@/widgets/Page/Page';
+import { Page } from '@/widgets/Page';
 import { ArticlePortfolio } from '@/entities/PublicArticle';
 
 const MainPage = () => (
-    <Page>
+    <Page data-cy="MainPage">
         <ArticlePortfolio />
     </Page>
 );

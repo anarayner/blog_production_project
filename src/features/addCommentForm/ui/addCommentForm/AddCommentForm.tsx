@@ -6,7 +6,7 @@ import { Input } from '@/shared/ui/Input/Input';
 import { Button } from '@/shared/ui/Button';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { HStack, VStack } from '@/shared/ui/Stack';
+import { HStack } from '@/shared/ui/Stack';
 import {
     getAddCommentFormError,
     getAddCommentFormText,

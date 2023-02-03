@@ -32,7 +32,6 @@ describe('fetchProfileData.test', () => {
 
         thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
         const result = await thunk.callThunk('1');
-        console.log(result);
         expect(result.meta.requestStatus).toBe('rejected');
     });
 });

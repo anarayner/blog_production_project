@@ -23,7 +23,11 @@ module.exports = {
         'rayner-plugin',
     ],
     rules: {
-        'rayner-plugin/path-checker': 'error',
+        'rayner-plugin/path-checker': ['error'],
+        'rayner-plugin/public-api-imports': ['error', {
+            alias: '@',
+            testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+        }],
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         'react/jsx-filename-extension': [2,
@@ -34,19 +38,13 @@ module.exports = {
         indent: [2, 4],
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
-        'react/jsx-props-no-spreading': 'warn',
+        'react/jsx-props-no-spreading': 'off',
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'max-len': 'off',
-        // 'max-len': ['error', { ignoreComments: true, code: 150 }],
-        // 'i18next/no-literal-string': ['error',
-        //     {
-        //         markupOnly: true,
-        //         ignoreAttribute: ['data-testid', 'to', 'target'],
-        //     }],
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks

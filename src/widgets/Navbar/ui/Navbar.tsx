@@ -36,7 +36,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
 
     if (authData) {
         return (
-            <div className={classNames(cls.Navbar, {}, [className])}>
+            <div
+                className={classNames(cls.Navbar, {}, [className])}
+                data-testid="test1"
+            >
                 <BrowserView>
                     <Text
                         className={cls.appName}
@@ -73,6 +76,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                 className={cls.links}
                 theme={ButtonTheme.OUTLINE}
                 onClick={onShowModal}
+                data-cy="submit"
             >
                 {t('Sign in')}
             </Button>

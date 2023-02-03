@@ -11,8 +11,7 @@ import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { VStack } from '@/shared/ui/Stack';
 import { Card, CardTheme, Padding } from '@/shared/ui/Card/Card';
-import { ArticleLinkBlockComponent } from '@/entities/Article/ui/ArticleLinkBlockComponent/ArticleLinkBlockComponent';
-import { ArticleBlockType } from '@/entities/Article/model/consts/articleConsts';
+import { ArticleBlockType, ArticleLinkBlockComponent } from '@/entities/Article';
 import {
     getArticlePortfolioData, getArticlePortfolioDataProjects,
     getArticlePortfolioError,
@@ -113,7 +112,7 @@ export const ArticlePortfolio = memo(({ className }: ArticleDetailsProps) => {
         );
     } else if (portfolio) {
         content = (
-            <>
+            <div data-cy="ArticlePortfolio">
                 <div className={cls.avatarWrapper}>
                     <Avatar
                         size={200}
@@ -127,6 +126,7 @@ export const ArticlePortfolio = memo(({ className }: ArticleDetailsProps) => {
                         title={portfolio?.title}
                         text={portfolio?.subtitle}
                         size={TextSize.L}
+                        data-testid="test"
                     />
                 </VStack>
                 <div className={cls.skills}>
@@ -148,7 +148,7 @@ export const ArticlePortfolio = memo(({ className }: ArticleDetailsProps) => {
                     </div>
                 </div>
                 {portfolio?.blocks.map(renderBlock)}
-            </>
+            </div>
         );
     }
 

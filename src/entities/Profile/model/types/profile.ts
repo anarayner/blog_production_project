@@ -1,4 +1,4 @@
-import { Currency } from '@/entities/Currency/model/types/currency';
+import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
 
 export interface Profile {

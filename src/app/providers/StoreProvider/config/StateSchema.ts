@@ -10,7 +10,7 @@ import { ArticleDetailsPageSchema } from '@/pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from '@/features/addCommentForm';
 import { scrollSaveSchema } from '@/features/scrollSave';
 import { ArticlesPageSchema } from '@/pages/ArticlePage';
-import { ArticlePortfolioSchema } from '@/entities/PublicArticle/model/types/articlePortfolioSchema';
+import { ArticlePortfolioSchema } from '@/entities/PublicArticle';
 import { rtkApi } from '@/shared/api/rtkApi';
 import { ProfileSchema } from '@/features/editableProfileCard';
 

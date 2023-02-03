@@ -6,7 +6,7 @@ import { AppRouter } from '@/app/providers/router';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
 import { getUserInit, userActions } from '@/entities/User';
-import { PageLoader } from '@/widgets/PageLoader/PageLoader';
+import { PageLoader } from '@/widgets/PageLoader';
 
 function App() {
     const { theme } = useTheme();

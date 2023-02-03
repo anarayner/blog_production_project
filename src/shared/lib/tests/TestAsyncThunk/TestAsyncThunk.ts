@@ -1,7 +1,7 @@
 import { AsyncThunkAction } from '@reduxjs/toolkit';
 import axios, { AxiosStatic } from 'axios';
 import { StateSchema } from '@/app/providers/StoreProvider';
-import { loginByUsername } from '@/features/AuthByUsername/model/services/loginByUsername';
+// eslint-disable-next-line rayner-plugin/public-api-imports
 import MockedFunctionDeep = jest.MockedFunctionDeep;
 
 type ActionCreatorType<Return, Arg, RejectedValue> =

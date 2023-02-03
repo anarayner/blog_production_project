@@ -1,9 +1,43 @@
 {
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Notification 1",
+      "description": "Something has happened.",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Notification 2",
+      "description": "Something has happened.",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Notification 3",
+      "description": "Something has happened.",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "Notification 4",
+      "description": "Something has happened.",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "Notification 5",
+      "description": "Something has happened.",
+      "userId": "2"
+    }
+  ],
   "portfolio": {
     "id": "4",
     "title": "Victoria Rayner",
     "subtitle": "Frontend/ Full Stack Software Engineer",
-    "img": "https://www.edology.com/uploads/media/sulu-700x450/00/1720-blog-why-coding-is-so-important-for-IT-jobs-s.jpg?v=2-0",
+    "img": "https://media.licdn.com/dms/image/C5603AQH-Vycx3K8rjg/profile-displayphoto-shrink_200_200/0/1655445857924?e=1678320000&v=beta&t=w892EDTsAweT_ZKkWR017xZa7gF6jY2biaLySY6o7rE",
     "skills": ["JavaScript", "React.js", "Typescript", "Redux", "MobX", "Node.js", "Express", "Webpack", "Jest", "React testing library", "ESLint",
       "Storybook", "HTML", "CSS", "SCSS", "Java", "Next.js", "Svelte", "PostgreSQL", "MongoDB", "Bootstrap", "Material UI", "Heroku", "Vercel",
       "Netlify"
@@ -606,9 +640,9 @@
     {
       "id": "1",
       "username": "admin",
-      "password": "123",
+      "password": "123456",
       "roles": ["ADMIN"],
-      "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+      "avatar": "https://media.licdn.com/dms/image/C5603AQH-Vycx3K8rjg/profile-displayphoto-shrink_200_200/0/1655445857924?e=1678320000&v=beta&t=w892EDTsAweT_ZKkWR017xZa7gF6jY2biaLySY6o7rE"
     },
     {
       "id": "2",
@@ -618,7 +652,7 @@
       "avatar": "https://www.bleepstatic.com/content/hl-images/2022/05/12/evil-hacker-ai.jpg"
     },
     {
-      "id": "2",
+      "id": "3",
       "username": "user",
       "password": "user",
       "roles": ["USER"],
@@ -635,7 +669,7 @@
       "country": "United State",
       "city": "Chattanooga",
       "username": "admin",
-      "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+      "avatar": "https://media.licdn.com/dms/image/C5603AQH-Vycx3K8rjg/profile-displayphoto-shrink_200_200/0/1655445857924?e=1678320000&v=beta&t=w892EDTsAweT_ZKkWR017xZa7gF6jY2biaLySY6o7rE"
     },
     {
       "id": "2",
@@ -647,6 +681,40 @@
       "city": "Seattle",
       "username": "user_eva",
       "avatar": "https://www.bleepstatic.com/content/hl-images/2022/05/12/evil-hacker-ai.jpg"
+    },
+    {
+      "id": "3",
+      "first": "User",
+      "lastname": "User",
+      "age": 30,
+      "currency": "USD",
+      "country": "United State",
+      "city": "Seattle",
+      "username": "user",
+      "avatar": "https://www.bleepstatic.com/content/hl-images/2022/05/12/evil-hacker-ai.jpg"
+    }
+  ],
+  "ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Great article",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 5,
+      "feedback": "Great article",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "id": "4",
+      "rate": 5,
+      "feedback": "Great article",
+      "userId": "2",
+      "articleId": "3"
     }
   ]
 }

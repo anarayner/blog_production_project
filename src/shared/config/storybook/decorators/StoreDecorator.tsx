@@ -3,10 +3,10 @@ import { ReducersMapObject } from '@reduxjs/toolkit';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 import { loginReducer } from '@/features/AuthByUsername';
 import { ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { articleDetailsReducer } from '@/entities/Article/model/slice/AtricleDetailsSlice';
-import { addCommentFormReducer } from '@/features/addCommentForm/model/slice/addCommentFormSlice';
-import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/model/slices';
-import { profileReducer } from '@/features/editableProfileCard/model/slice/profileSlice';
+import { articleDetailsReducer } from '@/entities/Article/testing';
+import { addCommentFormReducer } from '@/features/addCommentForm/testing';
+import { articleDetailsPageReducer } from '@/pages/ArticleDetailsPage/testing';
+import { profileReducer } from '@/features/editableProfileCard/testing';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,

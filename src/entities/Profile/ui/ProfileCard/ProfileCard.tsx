@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { Text, TextAlign, TextTheme } from '@/shared/ui/Text/Text';
 import { Input } from '@/shared/ui/Input/Input';
-import { PageLoader } from '@/widgets/PageLoader/PageLoader';
+import { PageLoader } from '@/widgets/PageLoader';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Currency, CurrencySelect } from '@/entities/Currency';
 import { Country, CountrySelect } from '@/entities/Country';
@@ -84,6 +84,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 readonly={readonly}
                 onChange={onChangeFirstname}
                 data-testid="ProfileCard.firstname"
+                data-cy="ProfileCard.firstname"
             />
             <Input
                 value={data?.lastname}
@@ -92,6 +93,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                 readonly={readonly}
                 onChange={onChangeLastname}
                 data-testid="ProfileCard.lastname"
+                data-cy="ProfileCard.lastname"
             />
             <Input
                 value={data?.age}
