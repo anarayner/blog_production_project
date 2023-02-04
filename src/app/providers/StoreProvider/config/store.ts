@@ -2,6 +2,7 @@ import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { CombinedState, Reducer } from 'redux';
 import { counterReducer } from '@/entities/Counter';
 import { userReducer } from '@/entities/User';
+// eslint-disable-next-line rayner-plugin/layer-imports
 import { createReducerManager } from '@/app/providers/StoreProvider/config/reducerManager';
 import { $api } from '@/shared/api/api';
 import { scrollSaveReducer } from '@/features/scrollSave';
