@@ -3,14 +3,13 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { BrowserView } from 'react-device-detect';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button } from '@/shared/ui/Button';
-import { ButtonTheme } from '@/shared/ui/Button/Button';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { LoginModal } from '@/features/AuthByUsername';
 import {
     getUserAuthData,
 } from '@/entities/User';
-import { Text, TextTheme } from '@/shared/ui/Text/Text';
-import { AppLinkTheme, AppLink } from '@/shared/ui/AppLink/AppLink';
+import { Text, TextTheme } from '@/shared/ui/Text';
+import { AppLinkTheme, AppLink } from '@/shared/ui/AppLink';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';

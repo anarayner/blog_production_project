@@ -4,7 +4,7 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { RatingCard } from '@/entities/Rating';
 // eslint-disable-next-line rayner-plugin/public-api-imports
 import cls from '@/entities/Profile/ui/ProfileCard/ProfileCard.module.scss';
-import { Input } from '@/shared/ui/Input/Input';
+import { Input } from '@/shared/ui/Input';
 
 const ProjectsPage = () => {
     const dispatch = useAppDispatch();

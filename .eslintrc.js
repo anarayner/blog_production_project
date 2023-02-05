@@ -21,6 +21,7 @@ module.exports = {
         '@typescript-eslint',
         'react-hooks',
         'rayner-plugin',
+        'unused-imports',
     ],
     rules: {
         'rayner-plugin/path-checker': ['error'],
@@ -37,6 +38,7 @@ module.exports = {
         'react/jsx-filename-extension': [2,
             { extensions: ['.js', '.jsx', '.tsx'] }],
         'import/no-unresolved': 'off',
+        'unused-imports/no-unused-imports': 'error',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'off',
         indent: [2, 4],

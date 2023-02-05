@@ -1,5 +1,5 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text } from '@/shared/ui/Text';
 import cls from './ArticleLinkBlockComponent.module.scss';
 import { ArticleLinkBlock } from '../../model/types/article';
 

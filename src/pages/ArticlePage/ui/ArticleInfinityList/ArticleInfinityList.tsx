@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { ArticleList } from '@/entities/Article';
-import { Text, TextSize } from '@/shared/ui/Text/Text';
+import { Text, TextSize } from '@/shared/ui/Text';
 import cls from './ArticleInfinityList.module.scss';
 import { getArticles } from '../../model/slices/articlesPageSlice';
 import {

@@ -6,11 +6,11 @@ import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
-import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
+import { Skeleton } from '@/shared/ui/Skeleton';
+import { Avatar } from '@/shared/ui/Avatar';
 import { VStack } from '@/shared/ui/Stack';
-import { Card, CardTheme, Padding } from '@/shared/ui/Card/Card';
+import { Card, CardTheme, Padding } from '@/shared/ui/Card';
 import { ArticleBlockType, ArticleLinkBlockComponent } from '@/entities/Article';
 import {
     getArticlePortfolioData, getArticlePortfolioDataProjects,
