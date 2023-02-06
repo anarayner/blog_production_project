@@ -2,13 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { FC, ReactNode, useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
 import { Reducer } from '@reduxjs/toolkit';
-import { ReduxStoreWithManager, StateSchemaKey } from '@/app/providers/StoreProvider';
+import { ReduxStoreWithManager, StateSchema, StateSchemaKey } from '@/app/providers/StoreProvider';
 
 export type ReducersList = {
-    [reducerKey in StateSchemaKey]?: Reducer;
+    [reducerKey in StateSchemaKey]?: Reducer<NonNullable<StateSchema[reducerKey]>>;
 }
-
-type ReducerListEntry =[StateSchemaKey, Reducer]
 
 interface DynamicModuleLoaderProps {
     reducers: ReducersList;

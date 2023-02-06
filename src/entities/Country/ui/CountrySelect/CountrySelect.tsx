@@ -16,7 +16,6 @@ const options = [
     { value: Country.Canada, content: Country.Canada },
     { value: Country.Ukraine, content: Country.Ukraine },
 ];
-
 export const CountrySelect = memo(({
     className, value, onChange, readonly,
 }: CountrySelectProps) => {
