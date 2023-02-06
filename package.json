@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --env port=3000 --env production",
     "start:vite": "vite",
-    "start:dev": "concurrently \"npm start\" \"npm run server\"",
+    "start:dev": "webpack serve --env port=3000 --env development",
     "start:dev:vite": "concurrently \"npm run start:vite\" \"npm run start:dev:server\"",
     "server": "node ./json-server/index.js",
     "build:prod": "webpack --env mode=production ",

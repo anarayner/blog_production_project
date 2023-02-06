@@ -1,13 +1,13 @@
 import { RuleSetRule } from 'webpack';
 import { BuildOptions } from './types/config';
-import { buildCssLoaders } from './loader/buildCssLoaders';
-import { buildBabelLoaders } from './loader/buildBabelLoaders';
+import { buildCssLoader } from './loader/buildCssLoader';
+import { buildBabelLoader } from './loader/buildBabelLoader';
 
 export function buildLoaders(options: BuildOptions): RuleSetRule[] {
     const { isDev } = options;
 
-    const codeBabelLoader = buildBabelLoaders({ ...options, isTsx: false });
-    const tsxCodeBabelLoader = buildBabelLoaders({ ...options, isTsx: true });
+    const codeBabelLoader = buildBabelLoader({ ...options, isTsx: false });
+    const tsxCodeBabelLoader = buildBabelLoader({ ...options, isTsx: true });
 
     const svgLoader = {
         test: /\.svg$/i,
@@ -30,7 +30,7 @@ export function buildLoaders(options: BuildOptions): RuleSetRule[] {
     //     exclude: /node_modules/,
     // };
 
-    const cssLoader = buildCssLoaders(isDev);
+    const cssLoader = buildCssLoader(isDev);
 
     return [
         svgLoader,
