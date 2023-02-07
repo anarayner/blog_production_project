@@ -28,8 +28,7 @@
     "prepare": "husky install",
     "generate:slice": "node ./scripts/createSlice/index.js",
     "generate:api": "ts-node ./scripts/refactoring/createPublicApiForSharedUi.ts",
-    "test": "cypress open",
-    "postinstall": "rm node_modules/.cache"
+    "test": "cypress open"
   },
   "keywords": [],
   "author": "",
