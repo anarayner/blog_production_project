@@ -5,7 +5,7 @@ npm run eslint-fix
 npm run eslint
 #npm run style
 #npm run test:unit
-#npm run test:ui
+npm run test:ui
 
 #npm run test:ui:report
 #npm run test:ui:ci

@@ -77,9 +77,9 @@ jobs:
 #      - name: screenshot testing
 #        run: npm run test:ui:ci
 #        if: always()
-      - name: Generate HTML report
-        run: npm run test:ui:report
-        if: always()
+#      - name: Generate HTML report
+#        run: npm run test:ui:report
+#        if: always()
       - name: move loki
         run: mv .loki reports/
         if: always()
