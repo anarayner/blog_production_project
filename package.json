@@ -16,7 +16,6 @@
     "style": "stylelint \"**/*.scss\"",
     "style-fix": "stylelint \"**/*.scss\" --fix",
     "test:unit": "jest",
-    "t": "jest Input.test.tsx",
     "test:ui": "npx loki test",
     "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
     "test:ui:json": "node scripts/generate-visual-json-report.js",
@@ -29,6 +28,10 @@
     "generate:slice": "node ./scripts/createSlice/index.js",
     "generate:api": "ts-node ./scripts/refactoring/createPublicApiForSharedUi.ts",
     "test": "cypress open"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": "eslint",
+    "*": ["test:unit", "test:ui"]
   },
   "keywords": [],
   "author": "",
@@ -127,7 +130,8 @@
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "react-virtualized-auto-sizer": "^1.0.7",
-    "react-window": "^1.8.8"
+    "react-window": "^1.8.8",
+    "whatwg-fetch": "^3.6.2"
   },
   "loki": {
     "configurations": {

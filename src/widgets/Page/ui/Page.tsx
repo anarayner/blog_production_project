@@ -54,6 +54,7 @@ export const Page = memo((props: PageProps) => {
             className={classNames(cls.Page, {}, [className])}
             onScroll={onScroll}
             id={PAGE_ID}
+            data-testid={props['data-testid'] ?? 'Page'}
             data-cy={props['data-cy'] ?? 'Page'}
         >
             {children}

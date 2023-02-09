@@ -77,7 +77,7 @@ export default {
         'node_modules', 'src',
     ],
 
-    setupFilesAfterEnv: ['<rootDir>/config/jest/jest-setup.ts'],
+    setupFilesAfterEnv: ['<rootDir>/config/jest/jest-setup.ts', '@testing-library/jest-dom'],
 
     moduleNameMapper: {
         '\\.(css|scss)$': 'identity-obj-proxy',

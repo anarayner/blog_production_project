@@ -44,7 +44,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChangeCountry,
     } = props;
     const { t } = useTranslation('profile');
-
     if (isLoading) {
         return (
             <div className={classNames(cls.ProfileCard, {}, [className])}>
@@ -72,11 +71,9 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     return (
         <VStack gap="8" max className={classNames(cls.ProfileCard, mods, [className])}>
-            {data?.avatar && (
-                <HStack justify="center" max>
-                    <Avatar src={data?.avatar} alt="avatar" size={150} />
-                </HStack>
-            )}
+            <HStack justify="center" max>
+                <Avatar src={data?.avatar} alt="avatar" size={150} large />
+            </HStack>
             <Input
                 value={data?.first}
                 placeholder={t('First Name')}

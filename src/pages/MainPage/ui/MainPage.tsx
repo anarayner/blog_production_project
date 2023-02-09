@@ -3,7 +3,7 @@ import { Page } from '@/widgets/Page';
 import { ArticlePortfolio } from '@/entities/PublicArticle';
 
 const MainPage = () => (
-    <Page data-cy="MainPage">
+    <Page data-cy="MainPage" data-testid="MainPage">
         <ArticlePortfolio />
     </Page>
 );
