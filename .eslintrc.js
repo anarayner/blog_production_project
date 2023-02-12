@@ -7,6 +7,8 @@ module.exports = {
     extends: [
         'plugin:react/recommended',
         'airbnb',
+        'plugin:storybook/recommended',
+        'prettier',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -24,24 +26,40 @@ module.exports = {
         'unused-imports',
     ],
     rules: {
-        'rayner-plugin/path-checker': ['error'],
-        'rayner-plugin/public-api-imports': ['error', {
-            alias: '@',
-            testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
-        }],
-        'rayner-plugin/layer-imports': ['error', {
-            alias: '@',
-            ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
-        }],
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
-        'react/jsx-filename-extension': [2,
-            { extensions: ['.js', '.jsx', '.tsx'] }],
+        // 'rayner-plugin/path-checker': [
+        //     'error',
+        //     {
+        //         alias: '@',
+        //     },
+        // ],
+        'rayner-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
+            },
+        ],
+        'rayner-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
+        'react/jsx-filename-extension': [
+            2,
+            {
+                extensions: ['.js', '.jsx', '.tsx'],
+            },
+        ],
         'import/no-unresolved': 'off',
         'unused-imports/no-unused-imports': 'error',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'off',
-        indent: [2, 4],
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'off',
@@ -53,12 +71,15 @@ module.exports = {
         'max-len': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
-        'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
-        'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
+        'react-hooks/rules-of-hooks': 'error',
+        // Checks rules of Hooks
+        'react-hooks/exhaustive-deps': 'error',
+        // Checks effect dependencies
         'no-param-reassign': 'off',
         '@typescript-eslint/no-unused-vars': ['warn'],
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
+        'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
     },
     globals: {
         __IS_DEV__: true,

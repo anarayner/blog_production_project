@@ -12,27 +12,25 @@ const initialState: ArticlePortfolioSchema = {
 export const articlePortfolioSlice = createSlice({
     name: 'articlePortfolio',
     initialState,
-    reducers: {
-    },
+    reducers: {},
     extraReducers: (builder) => {
         builder
             .addCase(fetchArticlePortfolio.pending, (state) => {
                 state.error = undefined;
                 state.isLoading = true;
             })
-            .addCase(fetchArticlePortfolio.fulfilled, (
-                state,
-                action: PayloadAction<PublicArticle>,
-            ) => {
-                state.isLoading = false;
-                state.data = action.payload;
-            })
+            .addCase(
+                fetchArticlePortfolio.fulfilled,
+                (state, action: PayloadAction<PublicArticle>) => {
+                    state.isLoading = false;
+                    state.data = action.payload;
+                },
+            )
             .addCase(fetchArticlePortfolio.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload;
             });
     },
-
 });
 
 // Action creators are generated for each case reducer function

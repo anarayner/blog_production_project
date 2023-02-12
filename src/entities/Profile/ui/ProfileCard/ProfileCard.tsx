@@ -16,15 +16,14 @@ interface ProfileCardProps {
     isLoading?: boolean;
     error?: string;
     readonly?: boolean;
-    onChangeFirstname?: (value?: string)=> void;
-    onChangeLastname?: (value?: string)=> void;
-    onChangeAge?: (value?: string)=> void;
-    onChangeCity?: (value?: string)=> void;
-    onChangeUsername?: (value?: string)=> void;
-    onChangeAvatar?: (value?: string)=> void;
-    onChangeCurrency?: (currency?: Currency)=> void;
-    onChangeCountry?: (country?: Country)=> void;
-
+    onChangeFirstname?: (value?: string) => void;
+    onChangeLastname?: (value?: string) => void;
+    onChangeAge?: (value?: string) => void;
+    onChangeCity?: (value?: string) => void;
+    onChangeUsername?: (value?: string) => void;
+    onChangeAvatar?: (value?: string) => void;
+    onChangeCurrency?: (currency?: Currency) => void;
+    onChangeCountry?: (country?: Country) => void;
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {
@@ -54,7 +53,11 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (error) {
         return (
-            <HStack justify="center" max className={classNames(cls.ProfileCard, {}, [className])}>
+            <HStack
+                justify="center"
+                max
+                className={classNames(cls.ProfileCard, {}, [className])}
+            >
                 <Text
                     theme={TextTheme.ERROR}
                     title={t('An error occurred while loading the profile')}
@@ -70,7 +73,11 @@ export const ProfileCard = (props: ProfileCardProps) => {
     };
 
     return (
-        <VStack gap="8" max className={classNames(cls.ProfileCard, mods, [className])}>
+        <VStack
+            gap="8"
+            max
+            className={classNames(cls.ProfileCard, mods, [className])}
+        >
             <HStack justify="center" max>
                 <Avatar src={data?.avatar} alt="avatar" size={150} large />
             </HStack>

@@ -3,7 +3,7 @@ import { memo } from 'react';
 import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
-interface LangSwitcherProps{
+interface LangSwitcherProps {
     className?: string;
 }
 

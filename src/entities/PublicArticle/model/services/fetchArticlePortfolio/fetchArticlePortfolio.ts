@@ -7,22 +7,22 @@ export const fetchArticlePortfolio = createAsyncThunk<
     PublicArticle,
     void,
     ThunkConfig<string>
-    >(
-        'articleDetails/fetchArticleProjects',
-        async (_, thunkApi) => {
-            const { extra, rejectWithValue } = thunkApi;
+>('articleDetails/fetchArticleProjects', async (_, thunkApi) => {
+    const { extra, rejectWithValue } = thunkApi;
 
-            try {
-                const response = await axios.get<PublicArticle>('https://raynerserver.vercel.app/portfolio', {});
+    try {
+        const response = await axios.get<PublicArticle>(
+            'https://raynerserver.vercel.app/portfolio',
+            {},
+        );
 
-                if (!response.data) {
-                    throw new Error();
-                }
+        if (!response.data) {
+            throw new Error();
+        }
 
-                return response.data;
-            } catch (e) {
-                // console.log(e);
-                return rejectWithValue('error');
-            }
-        },
-    );
+        return response.data;
+    } catch (e) {
+        // console.log(e);
+        return rejectWithValue('error');
+    }
+});

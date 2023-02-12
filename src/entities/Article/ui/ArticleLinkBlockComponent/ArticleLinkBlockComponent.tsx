@@ -8,7 +8,10 @@ interface ArticleLinkBlockComponentProps {
     block: ArticleLinkBlock;
 }
 
-export const ArticleLinkBlockComponent = ({ className, block }: ArticleLinkBlockComponentProps) => (
+export const ArticleLinkBlockComponent = ({
+    className,
+    block,
+}: ArticleLinkBlockComponentProps) => (
     <div className={classNames(cls.ArticleLinkBlockComponent, {}, [className])}>
         {block.title && (
             <a href={block.link}>

@@ -11,7 +11,9 @@ export default {
     },
 } as ComponentMeta<typeof ArticlePageFilters>;
 
-const Template: ComponentStory<typeof ArticlePageFilters> = (args) => <ArticlePageFilters {...args} />;
+const Template: ComponentStory<typeof ArticlePageFilters> = (args) => (
+    <ArticlePageFilters {...args} />
+);
 
 export const Light = Template.bind({});
 Light.args = {};

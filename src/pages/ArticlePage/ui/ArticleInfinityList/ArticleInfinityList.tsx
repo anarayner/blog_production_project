@@ -19,38 +19,40 @@ interface ArticleInfinityListProps {
     className?: string;
 }
 
-export const ArticleInfinityList = memo(({ className }: ArticleInfinityListProps) => {
-    const { t } = useTranslation();
-    const dispatch = useAppDispatch();
+export const ArticleInfinityList = memo(
+    ({ className }: ArticleInfinityListProps) => {
+        const { t } = useTranslation();
+        const dispatch = useAppDispatch();
 
-    const articles = useSelector(getArticles.selectAll);
-    const isLoading = useSelector(getArticlesPageIsLoading);
-    const view = useSelector(getArticlesPageView);
-    const error = useSelector(getArticlesPageError);
-    const [searchParams] = useSearchParams();
+        const articles = useSelector(getArticles.selectAll);
+        const isLoading = useSelector(getArticlesPageIsLoading);
+        const view = useSelector(getArticlesPageView);
+        const error = useSelector(getArticlesPageError);
+        const [searchParams] = useSearchParams();
 
-    useInitialEffect(() => {
-        dispatch(initArticlesPage(searchParams));
-    });
+        useInitialEffect(() => {
+            dispatch(initArticlesPage(searchParams));
+        });
 
-    if (error) {
+        if (error) {
+            return (
+                <Text
+                    size={TextSize.L}
+                    className={cls.commentTitle}
+                    title={t('Loading articles error')}
+                />
+            );
+        }
+
         return (
-            <Text
-                size={TextSize.L}
-                className={cls.commentTitle}
-                title={t('Loading articles error')}
-            />
+            <div className={cls.ArticleInfinityList}>
+                <ArticleList
+                    isLoading={isLoading}
+                    view={view}
+                    articles={articles}
+                    className={className}
+                />
+            </div>
         );
-    }
-
-    return (
-        <div className={cls.ArticleInfinityList}>
-            <ArticleList
-                isLoading={isLoading}
-                view={view}
-                articles={articles}
-                className={className}
-            />
-        </div>
-    );
-});
+    },
+);

@@ -11,7 +11,7 @@ export interface User {
     roles?: UserRole[];
 }
 
-export interface UserSchema{
+export interface UserSchema {
     authData?: User;
     _init: boolean;
 }

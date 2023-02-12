@@ -1,7 +1,8 @@
-import React, {
-    memo, ReactNode, useCallback, useEffect,
-} from 'react';
-import { AnimationProvider, useAnimationLibs } from '@/shared/lib/components/AnimationProvider';
+import React, { memo, ReactNode, useCallback, useEffect } from 'react';
+import {
+    AnimationProvider,
+    useAnimationLibs,
+} from '@/shared/lib/components/AnimationProvider';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useModal } from '@/shared/lib/hooks/useModal/useModal';
 import { Overlay } from '../Overlay/Overlay';
@@ -23,13 +24,7 @@ export const DrawerContent = memo((props: DrawerProps) => {
     const { Spring, Gesture } = useAnimationLibs();
 
     const [{ y }, api] = Spring.useSpring(() => ({ y: height }));
-    const {
-        className,
-        children,
-        onClose,
-        isOpen,
-        lazy,
-    } = props;
+    const { className, children, onClose, isOpen, lazy } = props;
     const { theme } = useTheme();
 
     const openDrawer = useCallback(() => {
@@ -72,23 +67,22 @@ export const DrawerContent = memo((props: DrawerProps) => {
             }
         },
         {
-            from: () => [0, y.get()], filterTaps: true, bounds: { top: 0 }, rubberband: true,
+            from: () => [0, y.get()],
+            filterTaps: true,
+            bounds: { top: 0 },
+            rubberband: true,
         },
     );
 
     const display = y.to((py) => (py < height ? 'block' : 'none'));
 
-    const {
-        isClosing,
-        close,
-        isMounted,
-    } = useModal({
+    const { isClosing, close, isMounted } = useModal({
         onClose,
         isOpen,
         animationDelay: 300,
     });
 
-    const mods:Record<string, boolean | undefined> = {
+    const mods: Record<string, boolean | undefined> = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };
@@ -99,11 +93,21 @@ export const DrawerContent = memo((props: DrawerProps) => {
 
     return (
         <Portal>
-            <div className={classNames(cls.Drawer, mods, [className, theme, 'app_drawer'])}>
+            <div
+                className={classNames(cls.Drawer, mods, [
+                    className,
+                    theme,
+                    'app_drawer',
+                ])}
+            >
                 <Overlay onClick={close} />
                 <Spring.a.div
                     className={cls.sheet}
-                    style={{ display, bottom: `calc(-100vh + ${height - 100}px)`, y }}
+                    style={{
+                        display,
+                        bottom: `calc(-100vh + ${height - 100}px)`,
+                        y,
+                    }}
                     {...bind()}
                 >
                     {children}

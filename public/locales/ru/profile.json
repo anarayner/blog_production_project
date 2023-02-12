@@ -1,8 +1,8 @@
 {
-  "Profile": "Профиль",
-  "Edit": "Редактировать",
-  "First Name": "Имя",
-  "Last Name": "Фамилия",
-  "An error occurred while loading the profile": "Произошла ошибка при загрузке профиля",
-  "Try to reload the page": "Попробуйте обновить страницу"
+    "Profile": "Профиль",
+    "Edit": "Редактировать",
+    "First Name": "Имя",
+    "Last Name": "Фамилия",
+    "An error occurred while loading the profile": "Произошла ошибка при загрузке профиля",
+    "Try to reload the page": "Попробуйте обновить страницу"
 }

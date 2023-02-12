@@ -3,27 +3,27 @@ import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../../const/theme';
 import { LOCAL_STORAGE_THEME_KEY } from '../../../const/localstorage';
 
-interface UseThemeResult{
-    toggleTheme: ()=> void;
-    theme: Theme
+interface UseThemeResult {
+    toggleTheme: () => void;
+    theme: Theme;
 }
 export function useTheme(): UseThemeResult {
     const { theme, setTheme } = useContext(ThemeContext);
     const toggleTheme = () => {
-        let newTheme :Theme;
+        let newTheme: Theme;
         // const newTheme = theme === Theme.PURPLE ? Theme.LIGHT : Theme.PURPLE;
         switch (theme) {
-        case Theme.DARK:
-            newTheme = Theme.LIGHT;
-            break;
-        case Theme.LIGHT:
-            newTheme = Theme.PURPLE;
-            break;
-        case Theme.PURPLE:
-            newTheme = Theme.DARK;
-            break;
-        default:
-            newTheme = Theme.LIGHT;
+            case Theme.DARK:
+                newTheme = Theme.LIGHT;
+                break;
+            case Theme.LIGHT:
+                newTheme = Theme.PURPLE;
+                break;
+            case Theme.PURPLE:
+                newTheme = Theme.DARK;
+                break;
+            default:
+                newTheme = Theme.LIGHT;
         }
         setTheme?.(newTheme);
         document.body.className = newTheme;

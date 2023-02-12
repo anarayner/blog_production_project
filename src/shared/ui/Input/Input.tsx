@@ -2,14 +2,17 @@ import React, { InputHTMLAttributes, memo } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
 
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'| 'readOnly'>
+type HTMLInputProps = Omit<
+    InputHTMLAttributes<HTMLInputElement>,
+    'value' | 'onChange' | 'readOnly'
+>;
 
-export interface InputProps extends HTMLInputProps{
+export interface InputProps extends HTMLInputProps {
     className?: string;
     value?: string | number;
     onChange?: (value: string) => void;
-    placeholder?: string,
-    readonly?: boolean,
+    placeholder?: string;
+    readonly?: boolean;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -33,25 +36,9 @@ export const Input = memo((props: InputProps) => {
 
     return (
         <div className={classNames('', mods, [className])}>
-            {readonly
-                ? (
-                    <div className={cls.with_placeholder}>
-                        <div className={cls.placeholder}>
-                            {placeholder}
-                            :
-                        </div>
-                        <input
-                            className={cls.input}
-                            type={type}
-                            value={value}
-                            onChange={onChangeHandler}
-                            placeholder={placeholder}
-                            readOnly={readonly}
-                            {...otherProps}
-                        />
-                    </div>
-                )
-                : (
+            {readonly ? (
+                <div className={cls.with_placeholder}>
+                    <div className={cls.placeholder}>{placeholder}:</div>
                     <input
                         className={cls.input}
                         type={type}
@@ -61,7 +48,18 @@ export const Input = memo((props: InputProps) => {
                         readOnly={readonly}
                         {...otherProps}
                     />
-                )}
+                </div>
+            ) : (
+                <input
+                    className={cls.input}
+                    type={type}
+                    value={value}
+                    onChange={onChangeHandler}
+                    placeholder={placeholder}
+                    readOnly={readonly}
+                    {...otherProps}
+                />
+            )}
         </div>
     );
 });

@@ -2,8 +2,8 @@ import { useTranslation } from 'react-i18next';
 import { CSSProperties, useMemo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Avatar.module.scss';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { AppImage } from '@/shared/ui/AppImage';
+import { Skeleton } from '../Skeleton';
+import { AppImage } from '../AppImage';
 import UserIcon from '../../assets/icons/user-filled.svg';
 import UserIconLarge from '../../assets/icons/user-filled-150.svg';
 import { Icon } from '../Icon';
@@ -24,10 +24,13 @@ export const Avatar = ({
     large,
 }: AvatarProps) => {
     const { t } = useTranslation();
-    const styles = useMemo<CSSProperties>(() => ({
-        width: size,
-        height: size,
-    }), [size]);
+    const styles = useMemo<CSSProperties>(
+        () => ({
+            width: size,
+            height: size,
+        }),
+        [size],
+    );
     const icon = large ? UserIconLarge : UserIcon;
     const fallback = <Skeleton width={size} height={size} border="50%" />;
     const errorFallback = <Icon width={size} height={size} Svg={icon} />;

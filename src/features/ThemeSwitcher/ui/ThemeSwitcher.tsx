@@ -6,7 +6,7 @@ import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { Theme } from '@/shared/const/theme';
 
-interface ThemeSwitcherProps{
+interface ThemeSwitcherProps {
     className?: string;
 }
 
@@ -18,7 +18,7 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
             onClick={toggleTheme}
             theme={ButtonTheme.CLEAR}
         >
-            {theme === Theme.LIGHT ? <DarkIcon /> : <LightIcon /> }
+            {theme === Theme.LIGHT ? <DarkIcon /> : <LightIcon />}
         </Button>
     );
 });

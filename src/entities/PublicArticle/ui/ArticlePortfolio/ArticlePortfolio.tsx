@@ -1,19 +1,24 @@
 import { useTranslation } from 'react-i18next';
-import {
-    memo, useCallback, useEffect,
-} from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
 import { Skeleton } from '@/shared/ui/Skeleton';
 import { Avatar } from '@/shared/ui/Avatar';
 import { VStack } from '@/shared/ui/Stack';
 import { Card, CardTheme, Padding } from '@/shared/ui/Card';
-import { ArticleBlockType, ArticleLinkBlockComponent } from '@/entities/Article';
 import {
-    getArticlePortfolioData, getArticlePortfolioDataProjects,
+    ArticleBlockType,
+    ArticleLinkBlockComponent,
+} from '@/entities/Article';
+import {
+    getArticlePortfolioData,
+    getArticlePortfolioDataProjects,
     getArticlePortfolioError,
     getArticlePortfolioIsLoading,
 } from '../../model/selectors/articlePortfolio';
@@ -49,9 +54,8 @@ export const ArticlePortfolio = memo(({ className }: ArticleDetailsProps) => {
 
     console.log(projects);
 
-    const renderBlock = useCallback(
-        (block: ArticleBlock) => {
-            switch (block.type) {
+    const renderBlock = useCallback((block: ArticleBlock) => {
+        switch (block.type) {
             case ArticleBlockType.CODE:
                 return (
                     <ArticleCodeBlockComponent
@@ -86,17 +90,20 @@ export const ArticlePortfolio = memo(({ className }: ArticleDetailsProps) => {
                 );
             default:
                 return null;
-            }
-        },
-        [],
-    );
+        }
+    }, []);
 
     let content;
 
     if (isLoading) {
         content = (
             <>
-                <Skeleton className={cls.avatar} width={200} height={200} border="50%" />
+                <Skeleton
+                    className={cls.avatar}
+                    width={200}
+                    height={200}
+                    border="50%"
+                />
                 <Skeleton className={cls.title} width={300} height={32} />
                 <Skeleton className={cls.skeleton} width={600} height={24} />
                 <Skeleton className={cls.skeleton} width="100%" height={200} />
@@ -130,10 +137,7 @@ export const ArticlePortfolio = memo(({ className }: ArticleDetailsProps) => {
                     />
                 </VStack>
                 <div className={cls.skills}>
-                    <Text
-                        align={TextAlign.LEFT}
-                        title={t('Skills')}
-                    />
+                    <Text align={TextAlign.LEFT} title={t('Skills')} />
                     <div className={cls.skills_wrap}>
                         {portfolio.skills.map((tab) => (
                             <Card
@@ -154,7 +158,10 @@ export const ArticlePortfolio = memo(({ className }: ArticleDetailsProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <VStack gap="16" className={classNames(cls.ArticleDetails, {}, [className])}>
+            <VStack
+                gap="16"
+                className={classNames(cls.ArticleDetails, {}, [className])}
+            >
                 {content}
             </VStack>
         </DynamicModuleLoader>

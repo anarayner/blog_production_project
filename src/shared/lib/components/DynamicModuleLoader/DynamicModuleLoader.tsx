@@ -2,11 +2,17 @@ import { useTranslation } from 'react-i18next';
 import { FC, ReactNode, useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
 import { Reducer } from '@reduxjs/toolkit';
-import { ReduxStoreWithManager, StateSchema, StateSchemaKey } from '@/app/providers/StoreProvider';
+import {
+    ReduxStoreWithManager,
+    StateSchema,
+    StateSchemaKey,
+} from '@/app/providers/StoreProvider';
 
 export type ReducersList = {
-    [reducerKey in StateSchemaKey]?: Reducer<NonNullable<StateSchema[reducerKey]>>;
-}
+    [reducerKey in StateSchemaKey]?: Reducer<
+        NonNullable<StateSchema[reducerKey]>
+    >;
+};
 
 interface DynamicModuleLoaderProps {
     reducers: ReducersList;
@@ -14,13 +20,11 @@ interface DynamicModuleLoaderProps {
     children: ReactNode;
 }
 
-export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props: DynamicModuleLoaderProps) => {
+export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (
+    props: DynamicModuleLoaderProps,
+) => {
     const { t } = useTranslation();
-    const {
-        reducers,
-        removeAfterUnmount = true,
-        children,
-    } = props;
+    const { reducers, removeAfterUnmount = true, children } = props;
     const store = useStore() as ReduxStoreWithManager;
     const dispatch = useDispatch();
 
@@ -46,9 +50,5 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props: Dynamic
         // eslint-disable-next-line
     }, []);
 
-    return (
-        <div>
-            {children}
-        </div>
-    );
+    return <div>{children}</div>;
 };

@@ -1,5 +1,8 @@
 import { User } from '@/entities/User';
-import { ArticleBlockType, ArticleType } from '../../model/consts/articleConsts';
+import {
+    ArticleBlockType,
+    ArticleType,
+} from '../../model/consts/articleConsts';
 
 export interface ArticleBlockBase {
     id: string;
@@ -30,7 +33,11 @@ export interface ArticleLinkBlock extends ArticleBlockBase {
     link: string;
 }
 
-export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock | ArticleLinkBlock;
+export type ArticleBlock =
+    | ArticleCodeBlock
+    | ArticleImageBlock
+    | ArticleTextBlock
+    | ArticleLinkBlock;
 
 export enum ArticleView {
     BIG = 'BIG',

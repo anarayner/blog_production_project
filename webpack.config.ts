@@ -15,7 +15,10 @@ export default (env: BuildEnv) => {
 
     const mode = env.mode || 'development';
     const port = env.port || 4000;
-    const apiUrl = env.apiUrl || 'https://raynerserver.vercel.app' || 'http://localhost:8000';
+    const apiUrl =
+        env.apiUrl ||
+        'https://raynerserver.vercel.app' ||
+        'http://localhost:8000';
 
     const isDev = mode === 'development';
 

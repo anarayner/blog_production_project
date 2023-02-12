@@ -1,8 +1,8 @@
 {
-  "Profile": "Profile",
-  "Edit": "Edit",
-  "First Name": "First Name",
-  "Last Name": "Last Name",
-  "An error occurred while loading the profile": "An error occurred while loading the profile",
-  "Try to reload the page": "Try to reload the page"
+    "Profile": "Profile",
+    "Edit": "Edit",
+    "First Name": "First Name",
+    "Last Name": "Last Name",
+    "An error occurred while loading the profile": "An error occurred while loading the profile",
+    "Try to reload the page": "Try to reload the page"
 }

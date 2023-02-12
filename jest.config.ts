@@ -29,9 +29,7 @@ export default {
     // coverageDirectory: undefined,
 
     // An array of regexp pattern strings used to skip coverage collection
-    coveragePathIgnorePatterns: [
-        '\\\\node_modules\\\\',
-    ],
+    coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
 
     // Indicates which provider should be used to instrument code for coverage
     // coverageProvider: "babel",
@@ -73,11 +71,12 @@ export default {
     // maxWorkers: "50%",
 
     // An array of directory names to be searched recursively up from the requiring module's location
-    moduleDirectories: [
-        'node_modules', 'src',
-    ],
+    moduleDirectories: ['node_modules', 'src'],
 
-    setupFilesAfterEnv: ['<rootDir>/config/jest/jest-setup.ts', '@testing-library/jest-dom'],
+    setupFilesAfterEnv: [
+        '<rootDir>/config/jest/jest-setup.ts',
+        '@testing-library/jest-dom',
+    ],
 
     moduleNameMapper: {
         '\\.(css|scss)$': 'identity-obj-proxy',
@@ -86,22 +85,18 @@ export default {
     },
 
     // An array of file extensions your modules use
-    moduleFileExtensions: [
-        'js',
-        'jsx',
-        'ts',
-        'tsx',
-        'json',
-        'node',
-    ],
+    moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
     reporters: [
         'default',
-        ['jest-html-reporters', {
-            publicPath: '<rootDir>/reports/unit',
-            filename: 'report.html',
-            openReport: true,
-            inlineSource: true,
-        }],
+        [
+            'jest-html-reporters',
+            {
+                publicPath: '<rootDir>/reports/unit',
+                filename: 'report.html',
+                openReport: true,
+                inlineSource: true,
+            },
+        ],
     ],
 
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module

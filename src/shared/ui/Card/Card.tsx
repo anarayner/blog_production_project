@@ -11,7 +11,6 @@ export const enum Padding {
     NONE = 'padding_0',
     S = 'padding_10',
     M = 'padding_20',
-
 }
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
@@ -34,7 +33,11 @@ export const Card = memo((props: CardProps) => {
 
     return (
         <div
-            className={classNames(cls.Card, { [cls.max]: max }, [className, cls[theme], cls[padding]])}
+            className={classNames(cls.Card, { [cls.max]: max }, [
+                className,
+                cls[theme],
+                cls[padding],
+            ])}
             {...otherProps}
         >
             {children}
